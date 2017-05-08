@@ -4,14 +4,14 @@ exports.seed = function(knex, Promise) {
   return knex('ideas').del()
     .then(() => {
       const ideas = [{
-        title: '',
-        description: '',
+        title: 'titles are cool',
+        description: 'descriptions are fun',
         notes: '',
         defFeatures: '',
         posFeatures: '',
         market: '',
         valueAdd: '',
-        competion: '',
+        competition: '',
         compImprove: '',
         techUsed:'',
         challenges: '',
@@ -24,9 +24,8 @@ exports.seed = function(knex, Promise) {
         stage: 'Incubate',
         user_id: 1,
         date: new Date()
-
       }]
-      return knex('ideas').insert()
+      return knex('ideas').insert(ideas)
     });
 };
 

@@ -24,7 +24,7 @@ exports.up = function(knex, Promise) {
     table.integer('user_id')
       .references('id')
       .inTable('users')
-      .onDelete('CASCADE');                                                                                                                                                    
+      .onDelete('CASCADE');
   })
 };
 
