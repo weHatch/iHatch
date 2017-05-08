@@ -27,7 +27,7 @@ module.exports = {
 
   development: {
   client: 'postgresql',
-  connection: 'postgres://localhost/iHatch',
+  connection: 'postgres://localhost/ihatch',
   },
   production: {
     client: 'postgresql',
