@@ -4,7 +4,6 @@ exports.seed = function(knex, Promise) {
   return knex('users').del()
     .then(() => {
       const users = [{
-        id:1,
         email: 'ish@gmail.com',
         password: 'password',
         username: 'ish',

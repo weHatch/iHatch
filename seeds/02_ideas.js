@@ -3,8 +3,31 @@ exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
   return knex('ideas').del()
     .then(() => {
-      const ideas = [{
+      const ideas = [
+        {
         title: 'titles are cool',
+        description: 'descriptions are fun',
+        notes: '',
+        defFeatures: '',
+        posFeatures: '',
+        market: '',
+        valueAdd: '',
+        competition: '',
+        compImprove: '',
+        techUsed:'',
+        challenges: '',
+        resources:'',
+        purpose:'',
+        research:'',
+        links:'',
+        excitement: 2,
+        difficulty:5,
+        stage: 'Incubate',
+        user_id: 1,
+        date: new Date()
+      },
+      {
+        title: 'titles are sexy',
         description: 'descriptions are fun',
         notes: '',
         defFeatures: '',
