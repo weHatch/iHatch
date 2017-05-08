@@ -8,7 +8,6 @@ $(document).ready(function(){
     $('#modalFrame').click(function(){
       modal.style.display = "flex"
       modalUp = true
-
     })
 
     $("#modalCancel").click(function(){

@@ -21,6 +21,14 @@ router.get('/', function(req, res, next) {
     })
 });
 
+router.post('/', function(req, res, next) {
+  pg('ideas')
+    .select()
+    .then(ideass => {
+      console.log(ideass);
+      res.render('ideas', { ideass });
+    })
+});
 // router.post()
 
 // /new

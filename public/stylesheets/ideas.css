@@ -1,5 +1,5 @@
 .active {
-  display:block;
+  display:none;
   position:fixed;
   background-position: center;
   z-index: 1;
