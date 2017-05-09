@@ -1,11 +1,13 @@
+<div class="">
+  {{#each ideass}}
+          <a href="ideas/singleview/{{id}}"><h2 class ="titles">{{title}}</h2></a>
+  {{/each}}
+</div>
 
-{{#each ideass}}
-        <a href="/singleview/{{id}}"><h2 class ="titles">{{title}}</h2></a>
-{{/each}}
 
 
-<a id="modalFrame">Add Idea</a>
-<div id="myModal" class="hidden active">
+<div id="modalFrame">Add Idea</div>
+<div id="myModal" hidden>
         <div class="modalHeader">
           <h2>{{currentUser.name}}</h2>
         </div>
@@ -39,6 +41,13 @@
             </form>
         </div>
         <div class="modalFooter">
-          <button id="modalCancel" class="modalBtn">Cancel</button>
+          <a href="/ideas" id="modalCancel" class="modalBtn">Cancel</a>
         </div>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+$('#modalFrame').click(function() {
+  $('#myModal').toggleClass('active')
+})
+</script>

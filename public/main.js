@@ -5,15 +5,23 @@ $(document).ready(function(){
     console.log("js connected");
 
     //click on section to open modal edit window
-    $('#modalFrame').click(function(){
-      modal.style.display = "flex"
-      modalUp = true
+    // $('#modalFrame').click(function(){
+    //   modal.style.display = "flex"
+    //   modalUp = true
+    // })
+    //
+    // $("#modalCancel").click(function(){
+    //     modalUp = false
+    //     modal.style.display = "none"
+    //   })
+
+    $('#modalFrame').click(function() {
+      $('#myModal').toggleClass('active')
     })
 
-    $("#modalCancel").click(function(){
-        modalUp = false
-        modal.style.display = "none"
-      })
+    $('.titles').click(function() {
+      $('.titles').toggleClass('poop')
+    })
 
 
 })
