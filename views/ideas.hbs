@@ -11,7 +11,7 @@
 
 <div id="modalFrame">Add Idea</div>
 
-<div id="myModal" class="hide">
+<div id="myModal" class="hidden">
         <div class="modalMain">
             <!-- <p>Add Idea</p> -->
             <form class="addIdea" action="/ideas/new" method="post">
@@ -52,9 +52,9 @@
 <script type="text/javascript">
 $('#modalFrame').click(function() {
   console.log('butts');
-  $('#myModal').removeClass('hide');
+  $('#myModal').toggleClass('active');
 })
 $('#modalCancel').click(function() {
-  $('#myModal').toggleClass('active')
+  $('#myModal').hide()
 })
 </script>

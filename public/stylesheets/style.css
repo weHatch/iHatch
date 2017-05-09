@@ -6,3 +6,17 @@ body {
 a {
   color: #00B7FF;
 }
+
+/*ideas*/
+
+.hidden {
+  display:none;
+}
+
+.active {
+  display: block;
+}
+
+#modalFrame:hover {
+  cursor: pointer;
+}
