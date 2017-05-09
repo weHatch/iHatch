@@ -1,3 +1,27 @@
-<h1>{{title}}</h1>
-<p>{{title}}</p>
+<h1 id="slider_text">{{title}}</h1>
+<p>{{subtitle}}</p>
 <a href="/ideas" type="button">Login</a>
+
+<script              src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+
+<script type="text/javascript">
+
+slide_front_text();
+
+setTimeout(function() { slide_front_text() }, 8000);
+
+  function slide_front_text() {
+  $('#slider_text').slideUp(1200, function() {
+      $(this).text('Conceive').slideDown(500).delay(1200);
+      $(this).slideUp(1200, function() {
+        $(this).text("Incubate").slideDown(500).delay(1200);
+        $(this).slideUp(1200, function() {
+          $(this).text("Hatch").slideDown(500).delay(2500);
+        });
+      });
+  });
+}
+
+
+</script>
