@@ -27,10 +27,47 @@ function newIdea(body){
     difficulty: body.difficulty,
     date: new Date()
   })
+}
 
+function ideaInfo(id) {
+  return pg('ideas')
+    .where('id', id)
+}
+
+function updateIdea(body, id){
+  console.log("hello everybody");
+  return pg('ideas').where('id', id).update({
+    'title': body.title,
+    'description': body.description,
+    'excitement': body.excitement,
+    'difficulty': body.difficulty,
+    'notes': body.notes,
+    'defFeatures': body.defFeatures,
+    'posFeatures': body.posFeatures,
+    'market': body.market,
+    'valueAdd': body.valueAdd,
+    'competition': body.competition,
+    'compImprove': body.compImprove,
+    'techUsed': body.techUsed,
+    'challenges': body.challenges,
+    'resources': body.resources,
+    'purpose': body.purpose,
+    'research': body.research,
+    'links': body.links,
+    'stage': body.stage,
+    'date': new Date()
+  })
+}
+
+function deleteIdea(id) {
+  return pg('ideas').where(
+  'id', id).del()
 }
 
     module.exports = {
       respondAndRenderTodo,
-      newIdea
+      newIdea,
+      ideaInfo,
+      updateIdea,
+      deleteIdea
     }

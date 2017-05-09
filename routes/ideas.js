@@ -5,8 +5,6 @@ const pg = require('../db/knex')
 
 // Router mounted at localhost:/3000/ideas
 
-
-
 router.get('/', function(req, res, next) {
   pg('ideas')
     .select()
@@ -32,11 +30,40 @@ router.post('/', function(req, res, next) {
 });
 
 
-router.get('/singleview/:id', function(req, res, next){
+router.get('/:id/:title', function(req, res, next){
   const id = req.params.id;
-  console.log(id);
-  respondAndRenderTodo(id, res, 'singleview')
+  linkQuery.ideaInfo(id)
+    .then(data => {
+      // console.log(data);
+      res.render('singleview', data[0])
+    })
 });
+
+router.get('/:id/:title/edit', (req, res) => {
+  const id = req.params.id;
+  linkQuery.ideaInfo(id)
+    .then(data => {
+      // console.log(data);
+      res.render('edit', data[0])
+    })
+})
+
+router.post('/:id/:title/update', (req,res) => {
+  console.log('fuck you devin');
+  var id = req.params.id
+  var title = req.params.title
+  linkQuery.updateIdea(req.body, id)
+  .then(data=>{
+    console.log(data);
+    res.redirect('/ideas' + `/${id}/${title}`)
+  })
+})
+
+router.get('/:id/:title/delete', (req, res) => {
+  linkQuery.deleteIdea(req.params.id).then(() => {
+    res.redirect('/ideas')
+  })
+})
 
 
 // /:id

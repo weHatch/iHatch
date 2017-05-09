@@ -1,23 +1,6 @@
 .hidden {
   display:none;
-  /*position:fixed;
-  background-position: center;
-  z-index: 1;
-  padding: 7px;
-  margin-top: -77px;
-  width:500px;
-  height:500px;*/
-  /*opacity: .5;*/
-  /*background-color: rgb(208, 227, 237);
-  border: 5px solid black;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;*/
 }
-/*
-.hidden {
-  display: none;
-}*/
 
 .active {
   display: block;
