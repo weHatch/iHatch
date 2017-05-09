@@ -27,6 +27,6 @@
   cursor: pointer;
 }
 
-.poop {
-  color:red;
+.hidden {
+  display: none;
 }

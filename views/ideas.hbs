@@ -5,14 +5,11 @@
 </div>
 
 
-
 <div id="modalFrame">Add Idea</div>
+
 <div id="myModal" hidden>
-        <div class="modalHeader">
-          <h2>{{currentUser.name}}</h2>
-        </div>
         <div class="modalMain">
-            <p>Add Idea</p>
+            <!-- <p>Add Idea</p> -->
             <form class="addIdea" action="/ideas" method="post">
               <label for="title">Idea Title</label>
               <input type="text" name="title" value="" placeholder="Enter your idea title">
@@ -41,13 +38,17 @@
             </form>
         </div>
         <div class="modalFooter">
-          <a href="/ideas" id="modalCancel" class="modalBtn">Cancel</a>
+          <button id="modalCancel" class="modalBtn">Cancel</button>
         </div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
 $('#modalFrame').click(function() {
+  $('#modalFrame').hide();
+  $('#myModal').toggleClass('active');
+})
+$('#modalCancel').click(function() {
   $('#myModal').toggleClass('active')
 })
 </script>

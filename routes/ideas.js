@@ -39,9 +39,10 @@ router.post('/', function(req, res, next) {
     })
 });
 
-router.get('/singleview/:id', function(req, res, next) {
+router.post('/singleview/:id', function(req, res, next) {
   const id = req.params.id;
-  respondAndRenderTodo(id, res, 'singleview')
+  console.log(id);
+  respondAndRenderTodo(id, res, 'singleview');
 });
 
 
