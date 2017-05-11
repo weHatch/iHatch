@@ -31,7 +31,7 @@ router.get('/', function(req, res, next) {
   },
   {
     title: "WALKING ON SUNSHING",
-    subtitle: "And Ideas feeel good"
+    subtitle: "Ideas feel good"
   },
   {
     title: "IMPROVING THE WORLD",

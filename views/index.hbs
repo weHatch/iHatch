@@ -1,6 +1,22 @@
-<h1 id="slider_text">{{title}}</h1>
-<p>{{subtitle}}</p>
-<a href="/ideas" type="button">Login</a>
+
+<div class="wrapper">
+
+
+<div class="sliderText">
+  <div>
+    <h1 id="slider_text" class="sliderText_content">{{title}}</h1>
+  </div>
+  <div>
+    <p class="sliderText_content subtitle">{{subtitle}}</p>
+  </div>
+  <div>
+    <a href="/ideas" type="button" class="getStarted">Get Started</a>
+  </div>
+</div>
+
+
+
+</div>
 
 <script              src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
 </script>
@@ -9,7 +25,7 @@
 
 // slide_front_text();
 
-setTimeout(slide_front_text, 2000);
+setTimeout(slide_front_text, 2200);
 
   function slide_front_text() {
   $('#slider_text').slideUp(800, function() {
