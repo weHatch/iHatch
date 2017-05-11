@@ -1,60 +1,80 @@
-<div class="">
+<div class="wrapper">
+
+<div class="ideasHeader">
+  <h1>Current Ideas:</h1>
+</div>
+<div class="ideaDiv">
   {{#each ideass}}
-          <h2>
+        <div class="ish">
+          <h2 class="ideaTitle titles">
             {{title}}
           </h2>
-          <a href="ideas/{{id}}/{{title}}" class ="titles"><button>Hatch Idea
+          <h4 class="description">
+            {{description}}
+          </h4>
+          <a href="ideas/{{id}}/{{title}}" class ="titles"><button class="hatchButton">Hatch Idea
             </button></a>
+        </div>
   {{/each}}
 </div>
 
+<div class="addIdea">
+  <div id="modalFrame" class="adding">Add Idea</div>
+</div>
 
-<div id="modalFrame">Add Idea</div>
-
-<div id="myModal" hidden>
+<div id="myModal" class="hidden">
         <div class="modalMain">
             <!-- <p>Add Idea</p> -->
             <form class="addIdea" action="/ideas/new" method="post">
-              <label for="title">Idea Title</label>
-              <input type="text" name="title" value="" placeholder="Enter your idea title">
-              <label for="description"></label>
-              <input type="text" name="description" value="" placeholder="enter idea details">
-              <div class="">
-                <label for="excitement ">Idea Excitement</label>
+              <div class="input">
+                <label for="title">Idea Title</label>
+                <input type="text" name="title" value="" required placeholder="Enter your idea title">
+              </div>
+              <div class="input">
+                <label for="description">Idea Description</label>
+                <input type="text" name="description" value="" placeholder="enter idea details">
+              </div>
+              <div class="input">
+                <label for="excitement">Excitement Level</label>
                 <select class="excitement" name="excitement">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
+                  <option value="1">Somewhat Excited</option>
+                  <option value="2">Kind Of Excited</option>
+                  <option value="3" selected>Excited</option>
+                  <option value="4">Very Excited</option>
+                  <option value="5">Extremely Excited</option>
                 </select>
+              </div>
+              <div class="input">
                 <label for="difficulty ">Idea Difficulty</label>
                 <select class="difficulty" name="difficulty">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
+                  <option value="1">Very Easy</option>
+                  <option value="2">Easy</option>
+                  <option value="3" selected>Intermediate</option>
+                  <option value="4">Difficult</option>
+                  <option value="5">Very Difficult</option>
                 </select>
               </div>
-              <div>
-                {{date}}
+              <div class="buttonsDiv">
+                <div class="buttons">
+                  <button type="submit" id="modalSubmit" class="modalBtn">Submit</button>
+                </div>
+                <div class="buttons">
+                  <button id="modalCancel" class="modalBtn cancel">Cancel</button>
+                </div>
               </div>
-              <button id="modalSubmit" class="modalBtn">Submit</button>
             </form>
         </div>
-        <div class="modalFooter">
-          <button id="modalCancel" class="modalBtn">Cancel</button>
-        </div>
+</div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
-$('#modalFrame').click(function() {
-  $('#modalFrame').hide();
+$('.adding').click(function() {
+  console.log('butts');
   $('#myModal').toggleClass('active');
+  $('#modalFrame').toggleClass('green')
 })
 $('#modalCancel').click(function() {
-  $('#myModal').toggleClass('active')
+  $('#myModal').hide()
 })
 </script>

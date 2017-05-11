@@ -1,0 +1,12 @@
+#slider_text {
+	display: block;
+	font-size: 3em;
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 800;
+}
+
+.hide {
+  display: none;
+}
