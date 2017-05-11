@@ -27,11 +27,11 @@ router.get('/', function(req, res, next) {
   },
   {
     title: "BRINGING IDEAS TO LIFE",
-    subtitle: "Time to Meet Your Maker"
+    subtitle: "Time To Meet Your Maker"
   },
   {
     title: "WALKING ON SUNSHING",
-    subtitle: "Ideas feel good"
+    subtitle: "Ideas Feel Good"
   },
   {
     title: "IMPROVING THE WORLD",
