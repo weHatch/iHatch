@@ -38,6 +38,8 @@ router.get('/:id/:title', function(req, res, next){
     })
 });
 
+
+
 router.get('/:id/:title/edit', (req, res) => {
   const id = req.params.id;
   linkQuery.ideaInfo(id)
@@ -48,7 +50,6 @@ router.get('/:id/:title/edit', (req, res) => {
 })
 
 router.post('/:id/:title/update', (req,res) => {
-  console.log('fuck you devin');
   var id = req.params.id
   var title = req.params.title
   linkQuery.updateIdea(req.body, id)

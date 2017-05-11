@@ -4,26 +4,38 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
   console.log('running on port 3000');
-  const num = Math.floor((Math.random() * 4) + 1);
+  const num = Math.floor((Math.random() * 6) + 1);
   const stuff = [{
-    title: "Ideas Grow Here",
-    subtitle: "watch it become..."
+    title: "IDEAS GROW HERE",
+    subtitle: "Watch It Become..."
   },
   {
-    title: "Ideas Live Here",
-    subtitle: "watch it become..."
+    title: "IDEAS LIVE HERE",
+    subtitle: "Watch It Become..."
   },
   {
-    title: "Now Hatching:",
-    subtitle: "It's a bird, it's a plane, it's a..."
+    title: "NOW HATCHING:",
+    subtitle: "It's a Bird! - It's a plane! - It's a..."
   },
   {
-    title: "Creative Majesty,",
-    subtitle: "your kingdom awaits"
+    title: "CREATIVE HIGHNESS,",
+    subtitle: "Your Majesty Awaits"
   },
   {
-    title: "Ideaize to Realize",
-    subtitle: "make it without faking it"
+    title: "IDEA-IZE TO REAL-IZE",
+    subtitle: "Make It Without Faking It"
+  },
+  {
+    title: "BRINGING IDEAS TO LIFE",
+    subtitle: "Time to Meet Your Maker"
+  },
+  {
+    title: "WALKING ON SUNSHING",
+    subtitle: "And Ideas feeel good"
+  },
+  {
+    title: "IMPROVING THE WORLD",
+    subtitle: "It takes you to make a thing go ri-ight!"
   }
 ]
   res.render('index', stuff[(num)]);

@@ -35,7 +35,6 @@ function ideaInfo(id) {
 }
 
 function updateIdea(body, id){
-  console.log("hello everybody");
   return pg('ideas').where('id', id).update({
     'title': body.title,
     'description': body.description,

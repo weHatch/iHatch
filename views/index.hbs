@@ -7,17 +7,17 @@
 
 <script type="text/javascript">
 
-slide_front_text();
+// slide_front_text();
 
-setTimeout(function() { slide_front_text() }, 8000);
+setTimeout(slide_front_text, 2000);
 
   function slide_front_text() {
-  $('#slider_text').slideUp(1200, function() {
-      $(this).text('Conceive').slideDown(500).delay(1200);
+  $('#slider_text').slideUp(800, function() {
+      $(this).text('CONCEIVE.').slideDown(500).delay(1200);
       $(this).slideUp(1200, function() {
-        $(this).text("Incubate").slideDown(500).delay(1200);
+        $(this).text("INCUBATE.").slideDown(500).delay(1200);
         $(this).slideUp(1200, function() {
-          $(this).text("Hatch").slideDown(500).delay(2500);
+          $(this).text("HATCH.").slideDown(500).delay(2500);
         });
       });
   });
