@@ -5,7 +5,6 @@
 </div>
 <div class="ideaDiv">
   {{#each ideass}}
-      <div class="dish">
         <div class="ish">
           <h2 class="ideaTitle titles">
             {{title}}
@@ -13,10 +12,9 @@
           <h4 class="description">
             {{description}}
           </h4>
-          <a href="ideas/{{id}}/{{title}}" class ="titles"><button>Hatch Idea
+          <a href="ideas/{{id}}/{{title}}" class ="titles"><button class="hatchButton">Hatch Idea
             </button></a>
         </div>
-      </div>
   {{/each}}
 </div>
 
@@ -30,30 +28,30 @@
             <form class="addIdea" action="/ideas/new" method="post">
               <div class="input">
                 <label for="title">Idea Title</label>
-                <input type="text" name="title" value="" placeholder="Enter your idea title">
+                <input type="text" name="title" value="" required placeholder="Enter your idea title">
               </div>
               <div class="input">
-                <label for="description">Description</label>
+                <label for="description">Idea Description</label>
                 <input type="text" name="description" value="" placeholder="enter idea details">
               </div>
               <div class="input">
-                <label for="excitement">Idea Excitement</label>
+                <label for="excitement">Excitement Level</label>
                 <select class="excitement" name="excitement">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
+                  <option value="1">Somewhat Excited</option>
+                  <option value="2">Kind Of Excited</option>
+                  <option value="3" selected>Excited</option>
+                  <option value="4">Very Excited</option>
+                  <option value="5">Extremely Excited</option>
                 </select>
               </div>
               <div class="input">
                 <label for="difficulty ">Idea Difficulty</label>
                 <select class="difficulty" name="difficulty">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
+                  <option value="1">Very Easy</option>
+                  <option value="2">Easy</option>
+                  <option value="3" selected>Intermediate</option>
+                  <option value="4">Difficult</option>
+                  <option value="5">Very Difficult</option>
                 </select>
               </div>
               <div class="buttonsDiv">
@@ -61,7 +59,7 @@
                   <button type="submit" id="modalSubmit" class="modalBtn">Submit</button>
                 </div>
                 <div class="buttons">
-                  <button id="modalCancel" class="modalBtn">Cancel</button>
+                  <button id="modalCancel" class="modalBtn cancel">Cancel</button>
                 </div>
               </div>
             </form>

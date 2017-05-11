@@ -117,21 +117,11 @@ a {
   margin: auto;
 }
 
-.dish{
-  padding:5px;
-  width: 100%;
-  margin-bottom:2%;
-  /*margin:2%;*/
-  display: flex;
-  justify-content: center;
-
-  flex-wrap: wrap;
-}
 
 .ish {
   margin:2%;
-  padding:20px;
-  max-width: 20%;
+  padding:15px;
+  max-width: 25%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -148,7 +138,7 @@ a {
 
 
 .ideaTitle {
-
+  font-size: 2em;
 }
 
 .addIdea {
@@ -180,6 +170,22 @@ a {
   margin: auto;
 }
 
+.hatchButton {
+  margin-top:6%;
+  margin-bottom: auto;
+  padding:5px;
+  color: white;
+  font-family: acme;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  border: 2px solid rgba(1400,250,140,.7);
+  border-radius: 20px;
+  background-color: rgba(255,255,255, 0.3);
+}
+
+.hatchButton:hover {
+  cursor: pointer;
+}
+
 .modalMain {
   display: flex;
   justify-content: center;
@@ -205,9 +211,6 @@ a {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  border: 3px solid rgba(1400,250,140,.7);
-  border-radius: 20px;
-  background-color: rgba(255,255,255, 0.3);
 }
 
 .buttons {
@@ -225,4 +228,39 @@ a {
 
 .green{
   background-color: rgba(41,162,41,.6);
+}
+
+.modalBtn {
+  background-color: rgba(41,162,41,.6);
+  border-radius: 20px;
+  padding:8px;
+  color: white;
+  font-family: acme;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  border: 2px solid rgba(1400,250,140,.7);
+}
+
+.cancel {
+  background-color: rgba(240,0,0,.6);
+}
+
+input {
+  border-radius:10px;
+  text-align: center;
+}
+
+
+/*////////////////////////////////////////////////////////////////////////*/
+                    /*singleView.hbs*/
+
+.singleViewdiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.titleDiv {
+  color:red;
 }
