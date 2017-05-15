@@ -1,3 +1,16 @@
+<style media="screen">
+  body {
+    /*background-color: lightgrey;*/
+    width:100%;
+    background-image: url('../images/bulletin.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+</style>
+
+<div class="wrapper bg">
+
+
 <form class="addIdea" action="/ideas/{{id}}/{{title}}/update" method="post">
   <label for="title">Idea Title</label>
   <input type="text" name="title" value="{{title}}" placeholder="Enter your idea title">
@@ -110,3 +123,4 @@
 
 
 <a href="/ideas"><button>Home</button></a>
+</div>

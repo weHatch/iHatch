@@ -17,8 +17,8 @@ exports.up = function(knex, Promise) {
     table.string('purpose');
     table.string('research');
     table.string('links');
-    table.integer('excitement');
-    table.integer('difficulty');
+    table.string('excitement');
+    table.string('difficulty');
     table.string('stage')
     table.datetime('date').notNullable();
     table.integer('user_id')

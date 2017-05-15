@@ -1,21 +1,28 @@
+<style media="screen">
+  body {
+    width:100%;
+    background-image: url('../images/citybg3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+</style>
 
+<nav class="ideasNav">
+  <span style="letter-spacing:2px;">HATCH</span> - <span style="font-family: 'Droid Sans', sans-serif; letter-spacing:.8px;">Ideas to Grow</span>
+</nav>
 <div class="wrapper">
 
-
-<div class="sliderText">
-  <div>
-    <h1 id="slider_text" class="sliderText_content">{{title}}</h1>
-  </div>
-  <div>
-    <p class="sliderText_content subtitle">{{subtitle}}</p>
-  </div>
-  <div>
-    <a href="/ideas" type="button" class="getStarted">Get Started</a>
-  </div>
+  <div class="sliderText">
+    <div>
+      <h1 id="slider_text" class="sliderText_content">{{title}}</h1>
+    </div>
+    <div>
+      <p class="sliderText_content subtitle">{{subtitle}}</p>
+    </div>
+    <div>
+      <a href="/ideas" type="button" class="getStarted">Get Started</a>
+    </div>
 </div>
-
-
-
 </div>
 
 <script              src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
@@ -25,7 +32,8 @@
 
 // slide_front_text();
 
-setTimeout(slide_front_text, 2200);
+setTimeout(slide_front_text, 2500);
+hideNormalBG();
 
   function slide_front_text() {
   $('#slider_text').slideUp(800, function() {
@@ -38,6 +46,10 @@ setTimeout(slide_front_text, 2200);
       });
   });
 }
+
+$('.getStarted').click(function() {
+  $('.body').toggleClass('active')
+})
 
 
 </script>

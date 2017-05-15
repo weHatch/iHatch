@@ -1,11 +1,5 @@
-.hidden {
-  display:none;
-}
 
-.active {
-  display: block;
-}
 
-#modalFrame:hover {
-  cursor: pointer;
+body {
+background-image: url('../images/citybg1.jpg');
 }

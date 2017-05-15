@@ -30,7 +30,7 @@ router.get('/', function(req, res, next) {
     subtitle: "Time To Meet Your Maker"
   },
   {
-    title: "WALKING ON SUNSHING",
+    title: "WALKING ON SUNSHINE",
     subtitle: "Ideas Feel Good"
   },
   {

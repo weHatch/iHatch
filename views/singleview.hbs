@@ -1,99 +1,123 @@
-
-  <!-- <link rel="stylesheet" href="../public/stylesheets/style.css"> -->
-
-<div class="wrapper">
+<style media="screen">
+  body {
+    width:100%;
+    background-color: rgba(79, 192, 255, .9);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+</style>
 
   <div class="singleViewdiv">
+
     <div class="titleDiv">
-      <h1>{{title}}</h1>
+      <p class="h1">{{title}}</p>
     </div>
 
     <div class="contentDiv">
       <div class="content1">
-        <h3>Description</h3>
         <h5>{{description}}</h5>
       </div>
       <div class="content1">
-        <h4>Notes</h4>
-        {{notes}}
+        <h5>Write Your Notes Here</h5>
+        <h5>{{notes}}</h5>
       </div>
     </div>
 
+    <div class="notesDiv">
+
+    </div>
 
     <div class="levels_features">
-      <div class="dropDowns">
+      <div class="feature">
+        <h3>Excitement Level:</h3>
         {{excitement}}
+      </div>
+      <div class="feature">
+        <h3>Difficulty Level:</h3>
         {{difficulty}}
       </div>
-      <div class="features">
-        <div class="feature">
-          <h3>{{defFeatures}}</h3>
-        </div>
-        <div class="feature">
-          <h3>{{posFeatures}}</h3>
-        </div>
+      <div class="feature">
+        <h3>Definite Features:</h3>
+        <h3>{{defFeatures}}</h3>
+      </div>
+      <div class="feature">
+        <h3>Possible Features:</h3>
+        <h3>{{posFeatures}}</h3>
       </div>
     </div>
 
     <div class="audience">
       <div class="audience1">
+        <h4>Who is Your Target Audience?</h4>
         <h3>{{market}}</h3>
       </div>
-      <div class="audience2">
+      <div class="audience1">
+        <h4>Who is Your Product's Value Add?</h4>
         <h3>{{valueAdd}}</h3>
       </div>
     </div>
 
-
     <div class="competition">
-      <div class="">
+      <div class="competition1">
+        <h4>What is Your Current Compeition?</h4>
         <h3>{{competition}}</h3>
       </div>
-      <div class="">
+      <div class="competition1">
+        <h4>How Does Your Product Improve on the Competition?</h4>
         <h3>{{compImprove}}</h3>
       </div>
-      <div class="">
+      <div class="competition1">
+        <h4>Which Technologies & Processes Will You be Using?</h4>
         <h3>{{techUsed}}</h3>
       </div>
     </div>
 
     <div class="challenges_resources">
-      <div class="">
+      <div class="cr">
+        <h4>What Challenges Might You Face?</h4>
         <h3>{{challenges}}</h3>
       </div>
-      <div class="">
+      <div class="cr">
+        <h4>List Any Helpful Resources Here:</h4>
         <h3>{{resources}}</h3>
       </div>
     </div>
 
     <div class="purpose">
-      <div class="">
+      <div class="purpose1">
+        <h4>What is Your Purpose for Creating <em>{{title}}</em>?</h4>
         <h3>{{purpose}}</h3>
       </div>
-      <div class="">
+      <div class="purpose1">
+        <h4>How do You Plan to Research for <em>{{title}}</em>?</h4>
         <h3>{{research}}</h3>
       </div>
-      <div class="">
+      <div class="purpose1">
+        <h4>List Any Helpful Links Here:</h4>
         <h3>{{links}}</h3>
       </div>
     </div>
 
     <div class="stage_date">
-      <div class="">
+      <div class="sd">
+        <h3>What Stage is <em>{{title}}</em> currently in?</h3>
         <h3>{{stage}}</h3>
       </div>
-      <div class="">
+      <div class="sd">
+        <h4>Created On:</h4>
         <h3>{{date}}</h3>
       </div>
     </div>
   </div>
+
+
+
+<div class="buttonsDiv">
+  <a href="/ideas/{{id}}/{{title}}/edit"><div>Details</div></a>
+  <a href="/ideas"><div>Home</div></a>
+  <a href="/ideas/{{id}}/{{title}}/delete"><div>Delete</div></a>
 </div>
 
-
-
-<a href="/ideas/{{id}}/{{title}}/edit"><button type="button" name="button">Details</button></a>
-<a href="/ideas/{{id}}/{{title}}/delete"><button type="button" name="button">Delete</button></a>
-<a href="/ideas"><button type="button" name="button">Home</button></a>
 <!-- <h1>{{title}}</h1>
 <h3>{{description}}</h3>
 <h3>{{difficulty}}</h3>
