@@ -2,11 +2,6 @@ body {
   margin: auto;
 }
 
-.body {
-  /*background-image: url('../images/citybg1.jpg');*/
-}
-
-
 a {
   color: #00B7FF;
 }
@@ -33,12 +28,6 @@ a {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-}
-.indexBG {
-  width: 100%;
-  background-image: url('../images/citybg2.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 #slider_text {
@@ -128,7 +117,7 @@ a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: rgba(79, 192, 255, .6);
+  background-color: rgba(79, 192, 255, .9);
 }
 
 .titles {
@@ -211,7 +200,7 @@ a {
   padding:8px;
   border: 3px solid rgba(1400,250,140,.7);
   border-radius: 20px;
-  background-color: rgba(255,255,255, 0.5);
+  background-color: rgba(0,0,0, 0.7);
   margin: 1%;
 }
 
@@ -221,6 +210,7 @@ a {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin: auto;
 }
 
 .buttons {
@@ -246,7 +236,8 @@ a {
   padding:8px;
   color: white;
   font-family: 'Ubuntu', sans-serif;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+  text-shadow: -1px 0 black, 0 2px black, 1px 0 black;
   border: 2px solid rgba(1400,250,140,.7);
   width: 100%;
   font-size: 1.6em;
@@ -271,15 +262,18 @@ input {
   flex-wrap: wrap;
   text-align: center;
   color: white;
+  text-shadow: -1px 0 black, 0 2px black, 1px 0 black;
 }
 
 .titleDiv {
-  color:black;
+  color:white;
   width: 100%;
   font-size: 1.6em;
   display: flex;
   justify-content: center;
+  text-shadow: -1px 0 black, 0 2px black, 1px 0 black;
   margin: auto;
+  text-decoration: underline;
 }
 
 .titleDiv p {
@@ -419,7 +413,8 @@ input {
 
 .sd {
   width: 48%;
-  margin: .6%;
+  margin: .5%;
+  margin-bottom: auto;
   background-color: rgba(0, 0, 0, .6);
 }
 
@@ -427,10 +422,14 @@ input {
   display: flex;
   justify-content: center;
   width: 100%;
+  margin: auto;
 }
 
 .buttonsDiv a {
+  text-align: center;
+  width: 15%;
   margin: 2%;
+  margin-top: 1%;
   border: 2px solid white;
   border-radius: 20px;
   padding:4px;
@@ -438,5 +437,29 @@ input {
   padding-right: 10px;
   color: black;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
 
+.buttondDiv a:hover {
+  cursor: pointer;
+}
+
+.details {
+  background-color: rgba(173,255,47,.6);
+}
+
+.home {
+  background-color: rgba(255,255,255,.7);
+}
+
+.delete {
+  background-color: rgba(235,0,0,.7);
+}
+
+/*////////////////////////////////////////////////////////////////////////*/
+                    /*editw.hbs*/
+
+.addIdea {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
