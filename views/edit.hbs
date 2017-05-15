@@ -11,50 +11,63 @@
 
 
 <form class="addIdea" action="/ideas/{{id}}/{{title}}/update" method="post">
-  <!-- <div class="titleDiv"> -->
+  <div class="singleViewdiv">
+
+
+  <div class="titleDiv">
     <label for="title">Idea Title</label>
     <input type="text" name="title" value="{{title}}" placeholder="Enter your idea title">
-  <!-- </div> -->
-  <label for="description"></label>
-  <input type="text" name="description" value="{{description}}" placeholder="enter idea details">
-  <div class="">
-    <label for="excitement ">Idea Excitement</label>
-    <select class="excitement" name="excitement">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
-    <label for="difficulty ">Idea Difficulty</label>
-    <select class="difficulty" name="difficulty">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
   </div>
-  <div class="">
+
+  <div class="contentDiv">
+    <label class="content1" for="description"></label>
+    <input lass="content1" type="text" name="description" value="{{description}}" placeholder="enter idea details">
     <label for="notes">Add Some Notes:</label>
     <input type="text" name="notes" value="{{notes}}" placeholder="enter idea notes">
   </div>
-  <div class="">
-    <label for="defFeatures">Definite Features:</label>
-    <input type="text" name="defFeatures" value="{{defFeatures}}" placeholder="enter idea features...">
+
+  <div class="levels_features">
+    <div class="feature">
+    <label for="excitement ">Idea Excitement</label>
+      <select class="excitement" name="excitement">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+    <div class="feature">
+      <label for="difficulty ">Idea Difficulty</label>
+      <select class="difficulty" name="difficulty">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+    <div class="feature">
+      <label for="defFeatures">Definite Features:</label>
+      <input type="text" name="defFeatures" value="{{defFeatures}}" placeholder="enter idea features...">
+    </div>
+    <div class="feature">
+      <label for="posFeatures">Possible Features:</label>
+      <input type="text" name="posFeatures" value="{{posFeatures}}" placeholder="enter possible features...">
+    </div>
   </div>
-  <div class="">
-    <label for="posFeatures">Possible Features:</label>
-    <input type="text" name="posFeatures" value="{{posFeatures}}" placeholder="enter possible features...">
+
+  <div class="audience">
+    <div class="audience1">
+      <label for="market">What Is Your Market Or Audience:</label>
+      <input type="text" name="market" value="{{market}}" placeholder="market opportunities...">
+    </div>
+    <div class="">
+      <label for="valueAdd">What Is Your Value Add:</label>
+      <input type="text" name="valueAdd" value="{{valueAdd}}" placeholder="value add...">
+    </div>
   </div>
-  <div class="">
-    <label for="market">What Is Your Market Or Audience:</label>
-    <input type="text" name="market" value="{{market}}" placeholder="market opportunities...">
-  </div>
-  <div class="">
-    <label for="valueAdd">What Is Your Value Add:</label>
-    <input type="text" name="valueAdd" value="{{valueAdd}}" placeholder="value add...">
-  </div>
+
   <div class="">
     <label for="competition">What Or Who Is Your Competition:</label>
     <input type="text" name="competition" value="{{competition}}" placeholder="enter competition...">
@@ -97,31 +110,10 @@
     {{date}}
   </div>
   <button id="modalSubmit" class="modalBtn">Update</button>
+  </div>
 </form>
 
-
-
-
-<!-- <h1>{{title}}</h1>
-<h3>{{description}}</h3>
-<h3>{{difficulty}}</h3>
-<h3>{{excitement}}</h3>
-<h3>{{notes}}</h3>
-<h3>{{defFeatures}}</h3>
-<h3>{{posFeatures}}</h3>
-<h3>{{market}}</h3>
-<h3>{{valueAdd}}</h3>
-<h3>{{competition}}</h3>
-<h3>{{compImprove}}</h3>
-<h3>{{techUsed}}</h3>
-<h3>{{challenges}}</h3>
-<h3>{{resources}}</h3>
-<h3>{{purpose}}</h3>
-<h3>{{research}}</h3>
-<h3>{{links}}</h3>
-<h3>{{stage}}</h3>
-<h3>{{date}}</h3> -->
-
-
-<a href="/ideas"><button>Home</button></a>
+<div class="buttonsDiv">
+  <a class="home" href="/ideas"><div>Home</div></a>
+  </div>
 </div>

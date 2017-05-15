@@ -463,3 +463,8 @@ input {
   justify-content: center;
   width: 100%;
 }
+
+label {
+  font-size: .5em;
+  margin: 1%;
+}
