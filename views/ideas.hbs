@@ -25,30 +25,27 @@
         <div class="ish">
           <div class="ratings">
             <p>{{excitement}}</p>
+            <h6 class="ideaTitle titles">{{title}}</h6>
             <p>{{difficulty}}</p>
           </div>
-          <h1 class="ideaTitle titles">
-            {{title}}
-          </h1>
           <h4 class="description initialD">
             {{description}}
           </h4>
-          <a href="ideas/{{id}}/{{title}}" ><button class="hatchButton">Hatch Idea
-            </button></a>
+          <a href="ideas/{{id}}/{{title}}" class="hatchButton">Hatch Idea</a>
         </div>
   {{/each}}
 </div>
 
 <div class="addIdea">
-  <div id="modalFrame" class="adding">Add Idea</div>
+  <div class="adding">Add Idea</div>
 </div>
 
 <div id="myModal" class="hidden">
-        <div class="modalMain">
+        <div class="formModal">
             <!-- <p>Add Idea</p> -->
             <form class="addIdea" action="/ideas/new" method="post">
               <div class="input">
-                <label for="title">Idea Title</label>
+                <label class="modalTitle" for="title">Idea Title</label>
                 <textarea type="text" rows="2" cols="30" name="title" value="" required placeholder="Enter your idea title"></textarea>
               </div>
               <div class="input">
@@ -77,12 +74,14 @@
               </div>
               <div class="buttonsDiv">
                 <div class="buttons">
-                  <button type="submit" id="modalSubmit" class="modalBtn">Submit</button>
+                  <div class="modalBtn">
+                    <button type="submit" id="modalSubmit">Submit</button></div>
+                  <div class="buttons">
+                    <div id="modalCancel" class="modalBtn cancel">Cancel</divn>
+                  </div>
                 </div>
-                <!-- <div class="buttons">
-                  <button id="modalCancel" class="modalBtn cancel">Cancel</button>
-                </div> -->
               </div>
+
             </form>
         </div>
       </div>
@@ -90,7 +89,7 @@
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 $('.adding').click(function() {
   console.log('butts');
   $('#myModal').toggleClass('active');
@@ -99,4 +98,4 @@ $('.adding').click(function() {
 $('#modalCancel').click(function() {
   $('#myModal').hide()
 })
-</script>
+</script> -->

@@ -4,26 +4,14 @@ var modal = document.getElementById('myModal')
 $(document).ready(function(){
     console.log("js connected");
 
-    $('.body').css('visibility', 'visible')
+    // $('.body').css('visibility', 'visible')
 
-    //click on section to open modal edit window
-    // $('#modalFrame').click(function(){
-    //   modal.style.display = "flex"
-    //   modalUp = true
-    // })
-    //
-    // $("#modalCancel").click(function(){
-    //     modalUp = false
-    //     modal.style.display = "none"
-    //   })
-
-    $('#modalFrame').click(function() {
-      $('#myModal').toggleClass('active')
+    $('.adding').click(function() {
+      $('#myModal').toggleClass('active');
+      $('#modalFrame').toggleClass('green')
     })
-
-    $('.titles').click(function() {
-      $('.titles').toggleClass('poop')
+    $('#modalCancel').click(function() {
+      $('#myformModal').toggleClass('active')
+      $('#modalFrame').toggleClass('green')
     })
-
-
 })

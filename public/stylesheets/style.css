@@ -122,10 +122,9 @@ a {
 }
 
 .ish {
-  margin:2%;
-  padding:40px;
-  width: 20%;
-  height:
+  margin:1%;
+  max-width: 29%;
+  padding:2px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -133,21 +132,20 @@ a {
 }
 
 .ratings {
-  width: 100%;
+  width: auto;
   display: flex;
   justify-content: space-between;
-  /*margin-top: -20%;*/
+  margin: auto;
+  /*padding:5px;*/
 }
 
 .ratings p {
-  width: auto;
-  margin: auto;
+  margin: 1%;
   border: 2px solid white;
-  padding: 2px;
-  padding-left:45px;
-  padding-right:45px;
+  padding: 5px;
   border-radius: 5px;
   color: white;
+  align-self: center;
   background-color: rgba(0, 0, 0, .6);
   text-shadow: -1px 0 black, 0 2px black, 1px 0 black;
 }
@@ -164,7 +162,7 @@ a {
 .ideaTitle {
   font-size: 2em;
   margin: auto;
-  margin-bottom: 2%;
+  /*margin-bottom: 2%;*/
 }
 
 .addIdea {
@@ -173,7 +171,7 @@ a {
   width: 100%;
   margin-top: 3%;
   text-align: center;
-  font-family: acme;
+  font-family: Droid Sans, sans-serif;;
 }
 
 .adding {
@@ -192,25 +190,26 @@ a {
 }
 
 .description {
-  font-family:acme;
+  font-family:Droid Sans, sans-serif;
   color: white;
   text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
   margin: auto;
+  width: 98%;
   letter-spacing:.5px;
 }
 
 .hatchButton {
-  margin-top: 2%;
-  padding:5px;
+  margin: 5%;
   color: black;
-  font-family: acme;
+  font-family: Droid Sans, sans-serif;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   border: 2px solid rgba(1400,250,140,.7);
   border-radius: 20px;
-  background-color: rgba(255,255,255, 0.5);
-  width: 25%;
+  background-color: rgba(255,255,255, 0.8);
+  width: 80%;
   font-size: 1em;
   letter-spacing: 1.5px;
+  align-self: flex-end;
 }
 
 .hatchButton:hover {
@@ -227,7 +226,7 @@ a {
 }
 
 .input {
-  width: 100%;
+  width: 40%;
   color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   padding:8px;
@@ -273,8 +272,9 @@ a {
   /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
   text-shadow: -1px 0 black, 0 2px black, 1px 0 black;
   border: 2px solid rgba(1400,250,140,.7);
-  width: 100%;
   font-size: 1.6em;
+  margin: 2%;
+  width: auto;
 }
 
 .cancel {
@@ -285,6 +285,11 @@ input {
   border-radius:10px;
   text-align: center;
   align-self: center;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+button {
+  border: none;
 }
 
 
@@ -432,27 +437,10 @@ mark {
 .buttonsDiv {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: auto;
   margin: auto;
 }
 
-.buttonsDiv a {
-  text-align: center;
-  width: 15%;
-  margin: 2%;
-  margin-top: 1%;
-  border: 2px solid white;
-  border-radius: 20px;
-  padding:4px;
-  padding-left: 10px;
-  padding-right: 10px;
-  color: black;
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-}
-
-.buttondDiv a:hover {
-  cursor: pointer;
-}
 
 .details {
   background-color: rgba(173,255,47,.6);
@@ -487,16 +475,26 @@ label {
   -webkit-box-orient: vertical;
 }
 
+.formModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 
 @media (max-width: 1040px) {
 
   .ish {
-    width: 80%;
     border-radius: 10px;
   }
 
   .lilTitle {
-    font-size: .7em;
+    font-size: .6em;
+  }
+
+  .ideaTitle {
+    font-size: 1.5em;
   }
   .set {
     width: 100%;
@@ -516,11 +514,34 @@ label {
     font-size: .6em;
   }
 
-  .addIdea {
-    margin-bottom: 2%;
+  .adding {
+    width: 25%;
   }
 
-  .adding {
-    width: 80%;
+  .ratings p {
+    display: none;
+  }
+
+  .addIdea {
+    flex-wrap: wrap;
+  }
+
+  .input {
+    width: 35%;
+  }
+
+  .input textarea {
+    width: 100%;
+    overflow: scroll;
+  }
+
+  .input label {
+    font-size: .8em;
+    overflow-x: scroll;
+
+  }
+  .buttons {
+    width: 25%;
+    margin: 2%;
   }
 }
