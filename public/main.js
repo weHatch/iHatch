@@ -7,11 +7,11 @@ $(document).ready(function(){
     // $('.body').css('visibility', 'visible')
 
     $('.adding').click(function() {
-      $('#myModal').toggleClass('active');
-      $('#modalFrame').toggleClass('green')
+      $('.initialForm').toggleClass('active')
+      $('.adding').toggleClass('green')
     })
-    $('#modalCancel').click(function() {
-      $('#myformModal').toggleClass('active')
-      $('#modalFrame').toggleClass('green')
+    $('.cancel').click(function() {
+      $('.initialForm').toggleClass('active')
+      $('.adding').toggleClass('green')
     })
 })

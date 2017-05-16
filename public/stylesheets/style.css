@@ -123,21 +123,16 @@ a {
 
 .ish {
   margin:1%;
-  max-width: 29%;
+  width: 29%;
   padding:2px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  border-radius: 10px;
+  border: 2px solid lightgrey;
   background-color: rgba(79, 192, 255, .9);
 }
 
-.ratings {
-  width: auto;
-  display: flex;
-  justify-content: space-between;
-  margin: auto;
-  /*padding:5px;*/
-}
 
 .ratings p {
   margin: 1%;
@@ -148,6 +143,15 @@ a {
   align-self: center;
   background-color: rgba(0, 0, 0, .6);
   text-shadow: -1px 0 black, 0 2px black, 1px 0 black;
+  letter-spacing: 4px;
+  font-family: Droid Sans, sans-serif;
+}
+
+.ratings h6 {
+  width: 100%;
+  margin-top:4%;
+  margin-bottom: 4%;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .titles {
@@ -169,7 +173,7 @@ a {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 3%;
+  /*margin-top: 3%;*/
   text-align: center;
   font-family: Droid Sans, sans-serif;;
 }
@@ -183,6 +187,7 @@ a {
   background-color: rgba(203,82,1, .8);
   width: 10%;
   letter-spacing: 1px;
+  margin: 2%;
 }
 
 .addIdea div:hover {
@@ -200,6 +205,7 @@ a {
 
 .hatchButton {
   margin: 5%;
+  padding: 5px;
   color: black;
   font-family: Droid Sans, sans-serif;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
@@ -226,7 +232,7 @@ a {
 }
 
 .input {
-  width: 40%;
+  width: 30%;
   color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   padding:8px;
@@ -235,20 +241,12 @@ a {
   background-color: rgba(0,0,0, 0.7);
   margin: 1%;
   align-self: center;
+  font-size: .7em;
 }
 
-.buttonsDiv {
+.input textarea {
+  margin-top: 5%;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: auto;
-}
-
-.buttons {
-  width: 100%;
-  margin: auto;
 }
 
 .excitement {
@@ -263,34 +261,81 @@ a {
   background-color: rgba(41,162,41,.6);
 }
 
-.modalBtn {
+
+
+/*wljbfebasfnlwbhelijfdbqnicjwhluelvabif;jnd*/
+
+.formWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.blockSet {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.formSet {
+  text-align: center;
+  width: 100%;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  padding:10px;
+  border: 2px solid rgba(1400,250,140,.7);
+  border-radius: 20px;
+  background-color: rgba(0,0,0, 0.7);
+  margin: 2%;
+  font-size: .7em;
+}
+
+.formSetTitle {
+margin: 2%;
+width: 100%;
+}
+
+.btnDiv {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.btnDiv button {
+  width: 30%;
+  margin: 3%;
+}
+
+.inputted {
+  width: 100%;
+  margin-top: 2%;
+}
+
+.labeled {
+  font-size: 2em;
+  margin: auto;
+}
+
+.bouton {
+  width: 100%;
   background-color: rgba(41,162,41,.6);
   border-radius: 20px;
-  padding:8px;
   color: white;
   font-family: 'Ubuntu', sans-serif;
   /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
   text-shadow: -1px 0 black, 0 2px black, 1px 0 black;
   border: 2px solid rgba(1400,250,140,.7);
   font-size: 1.6em;
-  margin: 2%;
-  width: auto;
 }
 
 .cancel {
   background-color: rgba(240,0,0,.6);
 }
 
-input {
-  border-radius:10px;
-  text-align: center;
-  align-self: center;
-  font-family: 'Ubuntu', sans-serif;
-}
-
-button {
-  border: none;
-}
 
 
 /*////////////////////////////////////////////////////////////////////////*/
@@ -435,12 +480,25 @@ mark {
 }*/*/
 
 .buttonsDiv {
+  width: 100%;
   display: flex;
   justify-content: center;
-  width: auto;
+  align-items: center;
+  flex-wrap: wrap;;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
   margin: auto;
 }
 
+.buttonDiv {
+  background: none;
+  border: none;
+  width: 20%;
+}
 
 .details {
   background-color: rgba(173,255,47,.6);
@@ -456,11 +514,22 @@ mark {
 
 /*////////////////////////////////////////////////////////////////////////*/
                     /*editw.hbs*/
-
+#myModal {
+  margin: auto;
+  width: 100%;
+}
 .addIdea {
   display: flex;
   justify-content: center;
   width: 100%;
+  margin: auto;
+}
+
+.wrapperTime {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 75%;
 }
 
 label {
@@ -480,6 +549,7 @@ label {
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin: auto;
 }
 
 
@@ -487,10 +557,19 @@ label {
 
   .ish {
     border-radius: 10px;
+    width: auto;
   }
 
   .lilTitle {
     font-size: .6em;
+  }
+
+  .ideasHeader {
+    font-size: 1.2em;
+  }
+
+  .adding {
+    margin: 5%;
   }
 
   .ideaTitle {
@@ -516,32 +595,16 @@ label {
 
   .adding {
     width: 25%;
+    /*margin: 10%*/
+    margin-top: 3%;
+    margin: 3%;
   }
 
-  .ratings p {
-    display: none;
-  }
-
-  .addIdea {
-    flex-wrap: wrap;
-  }
-
-  .input {
-    width: 35%;
-  }
-
-  .input textarea {
+  .formSet {
     width: 100%;
-    overflow: scroll;
   }
 
-  .input label {
-    font-size: .8em;
-    overflow-x: scroll;
-
-  }
-  .buttons {
-    width: 25%;
-    margin: 2%;
+  .btnDiv button {
+    width: 100%;
   }
 }
