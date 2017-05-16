@@ -108,6 +108,8 @@ a {
   padding:10px;
   border: 2px solid white;
   border-radius: 20px;
+  text-align: center;
+  letter-spacing: 2px;
 }
 
 .ideaDiv {
@@ -119,20 +121,40 @@ a {
   margin: auto;
 }
 
-
 .ish {
   margin:2%;
-  padding:15px;
-  width: 15%;
+  padding:40px;
+  width: 20%;
+  height:
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   background-color: rgba(79, 192, 255, .9);
 }
 
+.ratings {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /*margin-top: -20%;*/
+}
+
+.ratings p {
+  width: auto;
+  margin: auto;
+  border: 2px solid white;
+  padding: 2px;
+  padding-left:45px;
+  padding-right:45px;
+  border-radius: 5px;
+  color: white;
+  background-color: rgba(0, 0, 0, .6);
+  text-shadow: -1px 0 black, 0 2px black, 1px 0 black;
+}
+
 .titles {
   width: 100%;
-  margin: 2%;
+  margin-top: 5%;
   color: rgba(41,188,41, 0.8);
   text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
   font-family: oleo script;
@@ -140,7 +162,9 @@ a {
 
 
 .ideaTitle {
-  font-size: 1.6em;
+  font-size: 2em;
+  margin: auto;
+  margin-bottom: 2%;
 }
 
 .addIdea {
@@ -176,18 +200,17 @@ a {
 }
 
 .hatchButton {
-  margin-top:6%;
-  margin-bottom: auto;
+  margin-top: 2%;
   padding:5px;
-  color: white;
+  color: black;
   font-family: acme;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   border: 2px solid rgba(1400,250,140,.7);
   border-radius: 20px;
-  background-color: rgba(255,255,255, 0.3);
-  width: 80%;
+  background-color: rgba(255,255,255, 0.5);
+  width: 25%;
   font-size: 1em;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.5px;
 }
 
 .hatchButton:hover {
@@ -465,10 +488,10 @@ label {
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 1040px) {
 
   .ish {
-    width: 100%;
+    width: 80%;
     border-radius: 10px;
   }
 

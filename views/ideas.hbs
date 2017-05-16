@@ -18,18 +18,22 @@
 <div class="wrapper">
 
 <div class="ideasHeader">
-  <h1>Current Ideas:</h1>
+  <h1>Current Ideas</h1>
 </div>
 <div class="ideaDiv">
   {{#each ideass}}
         <div class="ish">
+          <div class="ratings">
+            <p>{{excitement}}</p>
+            <p>{{difficulty}}</p>
+          </div>
           <h1 class="ideaTitle titles">
             {{title}}
           </h1>
           <h4 class="description initialD">
             {{description}}
           </h4>
-          <a href="ideas/{{id}}/{{title}}" class ="titles"><button class="hatchButton">Hatch Idea
+          <a href="ideas/{{id}}/{{title}}" ><button class="hatchButton">Hatch Idea
             </button></a>
         </div>
   {{/each}}
