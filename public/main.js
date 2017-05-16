@@ -4,6 +4,8 @@ var modal = document.getElementById('myModal')
 $(document).ready(function(){
     console.log("js connected");
 
+    $('.body').css('visibility', 'visible')
+
     //click on section to open modal edit window
     // $('#modalFrame').click(function(){
     //   modal.style.display = "flex"

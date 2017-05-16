@@ -6,6 +6,10 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+
+  label {
+    font-size: 1.5em;
+  }
 </style>
 
 <div class="bg">
@@ -41,11 +45,11 @@
             <form class="addIdea" action="/ideas/new" method="post">
               <div class="input">
                 <label for="title">Idea Title</label>
-                <input type="text" name="title" value="" required placeholder="Enter your idea title">
+                <textarea type="text" rows="2" cols="30" name="title" value="" required placeholder="Enter your idea title"></textarea>
               </div>
               <div class="input">
                 <label for="description">Idea Description</label>
-                <input type="text" name="description" value="" placeholder="enter idea details">
+                <textarea type="text" rows="5" cols="30" name="description" value="" required placeholder="Enter your idea description"></textarea>
               </div>
               <div class="input">
                 <label for="excitement">Excitement Level</label>
