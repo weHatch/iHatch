@@ -293,6 +293,12 @@ a {
   font-size: .7em;
 }
 
+.notFormSet {
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+
 .formSetTitle {
 margin: 2%;
 width: 100%;
@@ -557,7 +563,7 @@ label {
 
   .ish {
     border-radius: 10px;
-    width: auto;
+    width: 80%;
   }
 
   .lilTitle {
@@ -604,7 +610,23 @@ label {
     width: 100%;
   }
 
+  .ratings {
+    width: 50%;
+  }
+
+  .ideaTitle {
+    font-size: 2em;
+  }
+
   .btnDiv button {
     width: 100%;
+  }
+
+  .formSetTitle {
+    font-size: .7em;
+  }
+
+  .notFormSet {
+    font-size: .5em;
   }
 }

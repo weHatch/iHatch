@@ -3,8 +3,8 @@
     /*background-color: lightgrey;*/
     width:100%;
     background-image: url('../images/bulletin.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat: repeat;
   }
 
   label {
@@ -49,7 +49,7 @@
           <textarea required class="inputted" name="title" rows="2" cols="40" placeholder="Insert a Title Here:"></textarea>
         </div>
         <div class="formSet">
-          <div class="fomrSetTitle">
+          <div class="formSetTitle">
             <label class="labeled" for="">Idea Description</label>
           </div>
           <textarea class="inputted" name="description" rows="5" cols="30" placeholder="Insert a Description Here"></textarea>
@@ -80,57 +80,13 @@
             <option value="Very Difficult">Very Difficult</option>
           </select>
         </div>
-      </div>
-        <div class="btnDiv">
-          <button type="submit" class="bouton" name="button">Submit</button>
-          <button type="button" class="bouton cancel" name="button">Cancel</button>
+        <div class="notFormSet">
+          <div class="btnDiv">
+            <button type="submit" class="bouton" name="button">Submit</button>
+            <button type="button" class="bouton cancel" name="button">Cancel</button>
+          </div>
         </div>
+      </div>
       </div>
     </form>
 </div>
-
-<!-- <div id="myModal" class="hidden">
-        <div class="formModal">
-            <form class="addIdea" action="/ideas/new" method="post">
-              <div class="wrapperTime">
-                <div class="input">
-                  <label class="modalTitle" for="title">Idea Title</label>
-                  <textarea type="text" rows="2" cols="30" name="title" value="" required placeholder="Enter your idea title"></textarea>
-                </div>
-                <div class="input">
-                  <label for="description">Idea Description</label>
-                  <textarea type="text" rows="5" cols="30" name="description" value="" required placeholder="Enter your idea description"></textarea>
-                </div>
-                <div class="input">
-                  <label for="excitement">Excitement Level</label>
-                  <select class="excitement" name="excitement">
-                    <option value="Somewhat Excited">Somewhat Excited</option>
-                    <option value="Kind Of Excited">Kind Of Excited</option>
-                    <option value="Excited" selected>Excited</option>
-                    <option value="Very Excited">Very Excited</option>
-                    <option value="Extremely Excited">Extremely Excited</option>
-                  </select>
-                </div>
-                <div class="input">
-                  <label for="difficulty ">Idea Difficulty</label>
-                  <select class="difficulty" name="difficulty">
-                    <option value="Very Easy">Very Easy</option>
-                    <option value="Easy">Easy</option>
-                    <option value="Intermediate" selected>Intermediate</option>
-                    <option value="Difficult">Difficult</option>
-                    <option value="Very Difficult">Very Difficult</option>
-                  </select>
-                </div>
-                <button class="buttonDiv"type="submit">
-                  <div class="modalBtn modalSubmit">
-                    Submit
-                  </div>
-                </button>
-                <button class="buttonDiv">
-                  <div class="modalBtn cancel">
-                      Cancel
-                  </div>
-                </button>
-                </div>
-                </form>
-              </div> -->
