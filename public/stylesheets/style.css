@@ -96,7 +96,7 @@ a {
   display: flex;
   justify-content: center;
   margin: 2%;
-  font-family: acme;
+  font-family:ubuntu, sans-serif;
   color: white;
   text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
   font-size: 1.7em;
@@ -198,7 +198,7 @@ a {
   font-family:Droid Sans, sans-serif;
   color: white;
   text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
-  margin: auto;
+  margin-bottom: 2%;;
   width: 98%;
   letter-spacing:.5px;
 }
@@ -207,11 +207,11 @@ a {
   margin: 5%;
   padding: 5px;
   color: black;
-  font-family: Droid Sans, sans-serif;
+  font-family: Ubuntu,Droid Sans, sans-serif;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   border: 2px solid rgba(1400,250,140,.7);
   border-radius: 20px;
-  background-color: rgba(255,255,255, 0.8);
+  background-color: rgba(212,160,110, 0.6);
   width: 80%;
   font-size: 1em;
   letter-spacing: 1.5px;
@@ -336,6 +336,11 @@ width: 100%;
   text-shadow: -1px 0 black, 0 2px black, 1px 0 black;
   border: 2px solid rgba(1400,250,140,.7);
   font-size: 1.6em;
+  padding:10px;
+}
+
+.update {
+  margin: .5%;
 }
 
 .cancel {
@@ -400,7 +405,15 @@ width: 100%;
   border: 2px solid lightgrey;
   padding: 5px;
   max-height: 25vh;
+}
 
+.setTitle {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin: auto;
 }
 
 .setMain {
@@ -439,6 +452,8 @@ width: 100%;
 .lilTitle {
   width: 100%;
   margin: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .lilTitle h5 {
@@ -447,6 +462,16 @@ width: 100%;
   padding: 5px;
   font-size: 1em;
   font-family: 'Roboto Slab', serif;
+}
+
+.lilTitle p {
+  margin: auto;
+  width: 100%;
+}
+
+.titleChange {
+  width: 80%;
+  text-align: center;
 }
 
 mark {
@@ -458,13 +483,13 @@ mark {
 
 .theContent {
   width: 100%;
-  height: 100%;
+  /*height: 100%;*/
   /*padding:7px;*/
   border-radius: 5px;
   color: white;
   font-size: 1.4em;
   text-shadow: -1px 0 black, 0 2px black, 1px 0 black;
-  font-family: 'Droid Sans', sans-serif;
+  font-family: Droid Sans, sans-serif;
   margin: auto;
 }
 
@@ -473,50 +498,63 @@ mark {
   max-height: 15vh;
 }
 
+.theContent textarea {
+  width: 90%;
+  overflow-y: scroll;
+  text-align: center;
+}
+
 .date {
   font-size: .8em;
 }
-
-/*.ideasNav {
-  position: absolute;
-  color: white;
-  font-family: oleo script;
-  /*text-shadow: -1px 0 black, 0 2px black, 1px 0 black;*/
-  /*margin-left:1%;
-}*/*/
 
 .buttonsDiv {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;;
 }
-.buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-  margin: auto;
+.buttonsDiv a {
+  margin: 1%;
+  padding:8px;
+  border-radius:10px;
+  border: 2px solid black;
+  font-family: Droid Sans, sans-serif;
+  text-decoration: none;
+  color: black;
 }
 
-.buttonDiv {
-  background: none;
-  border: none;
-  width: 20%;
-}
 
 .details {
-  background-color: rgba(173,255,47,.6);
+  background-color: rgba(173,255,47,.9);
+}
+
+.details:hover {
+  background-color: rgba(173,255,47,.3);
+
 }
 
 .home {
-  background-color: rgba(255,255,255,.7);
+  background-color: rgba(255,255,255,.9);
+}
+
+.home:hover {
+  background-color: rgba(255,255,255,.3);
 }
 
 .delete {
-  background-color: rgba(235,0,0,.7);
+  background-color: rgba(235,0,0,.9);
 }
+
+.delete:hover {
+  background-color: rgba(235,0,0,.3);
+  cursor: crosshair;
+}
+
+
+
+
+
+
 
 /*////////////////////////////////////////////////////////////////////////*/
                     /*editw.hbs*/
@@ -567,7 +605,7 @@ label {
   }
 
   .lilTitle {
-    font-size: .6em;
+    font-size: .9em;
   }
 
   .ideasHeader {
