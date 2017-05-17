@@ -1,7 +1,8 @@
 <style media="screen">
   body {
     width:100%;
-    background-color: rgba(79, 192, 255, .6);
+    /*background-color: rgba(79, 192, 255, .6);*/
+    background-color: #7681B3;
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -12,18 +13,25 @@
     <div class="titleDiv">
       <p class="h1">{{title}}</p>
     </div>
+    <div class="buttonsDiv">
+      <a class="details" href="/ideas/{{id}}/{{title}}/edit"><div>Edit</div></a>
+      <a class="details" href="/ideas"><div>Home</div></a>
+      <a class="details" href="/ideas/{{id}}/{{title}}/delete"><div>Delete</div></a>
+    </div>
 
     <div class="contentDiv">
       <div class="set set1">
-        <div class="lilTitle">
+
+        <div class=" b1">
           <h5><mark>Project Description:</mark></h5>
         </div>
-        <div class="theContent">
-          <h5>{{description}}</h5>
-        </div>
-      </div>
-        <div class="set set1">
           <div class="lilTitle">
+            <h5>{{description}}</h5>
+          </div>
+      </div>
+
+        <div class="set set1">
+          <div class="b1">
             <h5><mark>Your Notes Here:</mark></h5>
           </div>
           <div class="theContent">
@@ -33,24 +41,27 @@
     </div>
 
     <div class="contentDiv">
+      <div class="lilTitle">
+        <h5><mark>Excitement Level:</mark></h5>
+      </div>
       <div class="set setMain">
-        <div class="lilTitle">
-          <h5><mark>Excitement Level:</mark></h5>
-        </div>
+
         <div class="theContent">
           {{excitement}}
         </div>
       </div>
+      <div class="lilTitle">
+        <h5><mark>Difficulty Level:</mark></h5>
+      </div>
       <div class="set setMain">
-        <div class="lilTitle">
-          <h5><mark>Difficulty Level:</mark></h5>
-        </div>
         <div class="theContent">
           {{difficulty}}
         </div>
       </div>
+    </div>
+    <div class="contentDiv">
       <div class="set setMain">
-        <div class="lilTitle">
+        <div class="b1">
           <h5><mark>Definite Features:</mark></h5>
         </div>
         <div class="theContent">
@@ -58,7 +69,7 @@
         </div>
       </div>
       <div class="set setMain">
-        <div class="lilTitle">
+        <div class="b1">
           <h5><mark>Possible Features:</mark></h5>
         </div>
         <div class="theContent">
@@ -69,7 +80,7 @@
 
     <div class="contentDiv">
       <div class="set set2">
-        <div class="lilTitle">
+        <div class="b1">
           <h5><mark>Who is Your Target Audience?</mark></h5>
         </div>
         <div class="theContent">
@@ -77,7 +88,7 @@
         </div>
       </div>
     <div class="set set2">
-        <div class="lilTitle">
+        <div class="b1">
           <h5><mark>What is Your Product's Value Add?</mark></h5>
         </div>
         <div class="theContent">
@@ -88,7 +99,7 @@
 
     <div class="contentDiv">
       <div class="set set3">
-        <div class="lilTitle">
+        <div class="b1">
           <h5><mark>What is Your Current Compeition?</mark></h5>
         </div>
         <div class="theContent">
@@ -96,7 +107,7 @@
         </div>
       </div>
       <div class="set set3">
-        <div class="lilTitle">
+        <div class="b1">
           <h5><mark>How Will You Improve on the Competition?</mark></h5>
         </div>
         <div class="theContent">
@@ -104,7 +115,7 @@
         </div>
       </div>
       <div class="set set3">
-        <div class="lilTitle">
+        <div class="b1">
           <h5><mark>Which Technologies & Processes Will You be Using?</mark></h5>
         </div>
         <div class="theContent">
@@ -115,7 +126,7 @@
 
     <div class="contentDiv">
       <div class="set set4">
-        <div class="lilTitle">
+        <div class=" b1">
           <h5><mark>What Challenges Might You Face?</mark></h5>
         </div>
         <div class="theContent">
@@ -123,7 +134,7 @@
         </div>
       </div>
       <div class="set set4">
-        <div class="lilTitle">
+        <div class="b1">
           <h5><mark>List Any Helpful Resources Here:</mark></h5>
         </div>
         <div class="theContent">
@@ -134,7 +145,7 @@
 
     <div class="contentDiv">
       <div class="set set5">
-        <div class="lilTitle">
+        <div class="b1">
             <h5><mark>What is Your Purpose for Creating <em>{{title}}</em>?</mark></h5>
           </div>
         <div class="theContent">
@@ -142,7 +153,7 @@
         </div>
       </div>
       <div class="set set5">
-        <div class="lilTitle">
+        <div class="b1">
           <h5><mark>How do You Plan to Research for <em>{{title}}</em>?</mark></h5>
         </div>
         <div class="theContent">
@@ -150,7 +161,7 @@
         </div>
       </div>
       <div class="set set5">
-        <div class="lilTitle">
+        <div class="b1">
           <h5><mark>List Any Helpful Links Here:</mark></h5>
         </div>
         <div class="theContent">
@@ -161,7 +172,7 @@
 
     <div class="contentDiv">
       <div class="set set6">
-        <div class="lilTitle Bishes">
+        <div class="b1 Bishes">
           <h5><mark>What Stage is <em>{{title}}</em> currently in?</mark></h5>
         </div>
         <div class="theContent">
@@ -169,7 +180,7 @@
         </div>
       </div>
       <div class="set set6">
-        <div class="lilTitle">
+        <div class="b1">
           <h5><mark>Created On:</mark></h5>
         </div>
       <div class="theContent date">
@@ -183,9 +194,9 @@
 
 
 <div class="buttonsDiv">
-  <a class="details" href="/ideas/{{id}}/{{title}}/edit"><div>Advanced</div></a>
-  <a class="home" href="/ideas"><div>Home</div></a>
-  <a class="delete" href="/ideas/{{id}}/{{title}}/delete"><div>Delete</div></a>
+  <a class="details" href="/ideas/{{id}}/{{title}}/edit"><div>Edit</div></a>
+  <a class="details" href="/ideas"><div>Home</div></a>
+  <a class="details" href="/ideas/{{id}}/{{title}}/delete"><div>Delete</div></a>
 </div>
 
 <!-- <h1>{{title}}</h1>

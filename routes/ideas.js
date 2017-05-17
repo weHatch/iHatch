@@ -9,6 +9,7 @@ router.get('/', function(req, res, next) {
   pg('ideas')
     .select()
     .then(ideass => {
+      console.log(ideass);
       res.render('ideas', { ideass });
     })
 })
@@ -34,7 +35,7 @@ router.get('/:id/:title', function(req, res, next){
   const id = req.params.id;
   linkQuery.ideaInfo(id)
     .then(data => {
-      // console.log(data);
+      console.log(data);
       res.render('singleview', data[0])
     })
 })

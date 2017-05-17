@@ -3,7 +3,8 @@
     /*background-color: lightgrey;*/
     width:100%;
     height: 100vh;
-    background-image: url('../images/bulletin.jpg');
+    /*background-image: url('../images/bulletin.jpg');*/
+    background-color: #7681B3;
     background-size: contain;
     background-repeat: repeat;
   }
@@ -23,12 +24,14 @@
   {{#each ideass}}
         <div class="ish">
           <div class="ratings">
-            <p>{{excitement}}</p>
-            <h6 class="ideaTitle titles">{{title}}</h6>
-            <p>{{difficulty}}</p>
+            <h4 class="ideaTitle titles">{{title}}</h4>
+            <h4 class="rating"><span style="color:black">Excitement: </span> {{excitement}}</h4>
+              <h4 class="rating"><span style="color:black">Difficulty: </span> {{difficulty}}</h4>
+
           </div>
+
           <h4 class="description initialD">
-            {{description}}
+              <span style="color:black">Idea description: </span>{{description}}
           </h4>
           <a href="ideas/{{id}}/{{title}}" class="hatchButton">Hatch Idea</a>
         </div>
