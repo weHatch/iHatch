@@ -1,27 +1,31 @@
-var modalUp = false
-var modal = document.getElementById('myModal')
-
 $(document).ready(function(){
+
     console.log("js connected");
 
-    //click on section to open modal edit window
-    // $('#modalFrame').click(function(){
-    //   modal.style.display = "flex"
-    //   modalUp = true
-    // })
-    //
-    // $("#modalCancel").click(function(){
-    //     modalUp = false
-    //     modal.style.display = "none"
-    //   })
+    // $('.body').css('visibility', 'visible')
 
-    $('#modalFrame').click(function() {
-      $('#myModal').toggleClass('active')
+    $('.adding').click(function() {
+      $('.initialForm').toggleClass('active')
+      $('.adding').toggleClass('green')
     })
 
-    $('.titles').click(function() {
-      $('.titles').toggleClass('poop')
+    $('.cancel').click(function() {
+      $('.initialForm').toggleClass('active')
+      $('.adding').toggleClass('green')
     })
 
+    $('.continue').click(function()  {
+      $('fadeIn1').toggleClass('active')
+      $('.continue').toggleClass('hidden')
+    })
 
+    $('.continue1').click(function() {
+      $('fadeIn2').toggleClass('active')
+      $('.continue1').toggleClass('hidden')
+    })
+
+    $('.continue2').click(function() {
+      $('fadeIn3').toggleClass('active')
+      $('.continue2').toggleClass('hidden')
+    })
 })

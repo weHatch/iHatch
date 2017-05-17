@@ -1,8 +1,670 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: auto;
+  box-sizing: border-box;
 }
 
 a {
   color: #00B7FF;
+}
+
+
+/*ideas*/
+
+.hidden {
+  display:none;
+}
+
+.active {
+  display: block;
+}
+
+.adding:hover {
+  cursor: pointer;
+}
+
+/*////////////////////////////////////////////////////////////////////////*/
+                    /*Index.hbs*/
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#slider_text {
+  color: white;
+  /*text-shadow: 3px 3px 8px #BF7F00, -3px -3px 8px #BF7F00;*/
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+.sliderText {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 15%;
+}
+
+.sliderText div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 1em;
+}
+
+.sliderText_content {
+  font-size: 2.4em;
+  font-family: 'Roboto Slab', serif;
+  letter-spacing:1px;
+}
+
+.subtitle {
+  font-size: 1.7em;
+  text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+  font-family: 'Droid Sans', sans-serif;
+}
+
+.getStarted {
+
+    color: white;
+    text-decoration: none;
+    position: fixed;
+    bottom: 34%;
+    font-size: 2em;
+    width: 175px;
+    padding:5px;
+    border: 3px solid rgba(1400,250,140,.7);
+    border-radius: 20px;
+    /*background: orange;*/
+    background-color: rgba(255,255,255, 0.3);
+    font-family: 'Roboto Slab', serif;
+}
+
+.getStarted:hover {
+  background-color: rgba(41,162,41,.6);
+}
+
+/*////////////////////////////////////////////////////////////////////////*/
+                    /*Ideas.hbs*/
+.ideasHeader{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2%;
+  font-family:ubuntu, sans-serif;
+  color: white;
+  text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
+  font-size: 1.7em;
+}
+
+.ideasHeader h1 {
+  margin: 1%;
+  background-color: rgba(0, 0, 0, .6);
+  padding:10px;
+  border: 2px solid white;
+  border-radius: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.ideaDiv {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.ish {
+  margin:1%;
+  width: 29%;
+  padding:2px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  border: 2px solid lightgrey;
+  background-color: rgba(79, 192, 255, .9);
+}
+
+
+.ratings p {
+  margin: 1%;
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  align-self: center;
+  background-color: rgba(0, 0, 0, .6);
+  text-shadow: -1px 0 black, 0 2px black, 1px 0 black;
+  letter-spacing: 4px;
+  font-family: Droid Sans, sans-serif;
+}
+
+.ratings h6 {
+  width: 100%;
+  margin-top:4%;
+  margin-bottom: 4%;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.titles {
+  width: 100%;
+  margin-top: 5%;
+  color: rgba(41,188,41, 0.8);
+  text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
+  font-family: oleo script;
+}
+
+
+.ideaTitle {
+  font-size: 2em;
+  margin: auto;
+  /*margin-bottom: 2%;*/
+}
+
+.addIdea {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  /*margin-top: 3%;*/
+  text-align: center;
+  font-family: Droid Sans, sans-serif;;
+}
+
+.adding {
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  padding:8px;
+  border: 3px solid rgba(1400,250,140,.7);
+  border-radius: 20px;
+  background-color: rgba(203,82,1, .8);
+  width: 10%;
+  letter-spacing: 1px;
+  margin: 2%;
+}
+
+.addIdea div:hover {
+  background-color: rgba(41,162,41,.6);
+}
+
+.description {
+  font-family:Droid Sans, sans-serif;
+  color: white;
+  text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
+  margin-bottom: 2%;;
+  width: 98%;
+  letter-spacing:.5px;
+}
+
+.hatchButton {
+  margin: 5%;
+  padding: 5px;
+  color: black;
+  font-family: Ubuntu,Droid Sans, sans-serif;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  border: 2px solid rgba(1400,250,140,.7);
+  border-radius: 20px;
+  background-color: rgba(212,160,110, 0.6);
+  width: 80%;
+  font-size: 1em;
+  letter-spacing: 1.5px;
+  align-self: flex-end;
+}
+
+.hatchButton:hover {
+  cursor: pointer;
+  background-color: rgba(41,162,41,.6);
+}
+
+.modalMain {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.input {
+  width: 30%;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  padding:8px;
+  border: 3px solid rgba(1400,250,140,.7);
+  border-radius: 20px;
+  background-color: rgba(0,0,0, 0.7);
+  margin: 1%;
+  align-self: center;
+  font-size: .7em;
+}
+
+.input textarea {
+  margin-top: 5%;
+  width: 100%;
+}
+
+.excitement {
+  width: 100%;
+}
+
+.difficulty {
+  width: 100%;
+}
+
+.green{
+  background-color: rgba(41,162,41,.6);
+}
+
+
+
+/*wljbfebasfnlwbhelijfdbqnicjwhluelvabif;jnd*/
+
+.formWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.blockSet {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.formSet {
+  text-align: center;
+  width: 100%;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  padding:10px;
+  border: 2px solid rgba(1400,250,140,.7);
+  border-radius: 20px;
+  background-color: rgba(0,0,0, 0.7);
+  margin: 2%;
+  font-size: .7em;
+}
+
+.notFormSet {
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+
+.formSetTitle {
+margin: 2%;
+width: 100%;
+}
+
+.btnDiv {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.btnDiv button {
+  width: 30%;
+  margin: 3%;
+}
+
+.inputted {
+  width: 100%;
+  margin-top: 2%;
+}
+
+.labeled {
+  font-size: 2em;
+  margin: auto;
+}
+
+.bouton {
+  width: 100%;
+  background-color: rgba(41,162,41,.6);
+  border-radius: 20px;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+  text-shadow: -1px 0 black, 0 2px black, 1px 0 black;
+  border: 2px solid rgba(1400,250,140,.7);
+  font-size: 1.6em;
+  padding:10px;
+}
+
+.update {
+  margin: .5%;
+}
+
+.cancel {
+  background-color: rgba(240,0,0,.6);
+}
+
+
+
+/*////////////////////////////////////////////////////////////////////////*/
+                    /*singleView.hbs*/
+
+.singleViewdiv {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  color: black;
+  text-shadow: -1px 0 white, 0 2px white, 1px 0 white;
+}
+
+.titleDiv {
+  color:white;
+  width: 100%;
+  font-size: 1.6em;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.titleDiv p {
+  margin: .5%;
+  /*margin-top:2%;*/
+  font-size: 2em;
+  border-radius: 5px;
+  border: 3px solid white;
+  color: white;
+  text-shadow: 1px 1px 4px #BF7F00, -1px -1px 4px #BF7F00;
+}
+
+.h1 {
+  text-align: center;
+  width: auto;
+  padding:15px;
+  background-color: rgba(0, 0, 0, .6);
+}
+
+.contentDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin:auto;
+}
+
+.set {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin: .4%;
+  border: 2px solid lightgrey;
+  padding: 5px;
+  max-height: 25vh;
+}
+
+.setTitle {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.setMain {
+  width: 22%;
+  background-color: rgba(255,20,20,.4);
+}
+
+.set1 {
+  width: 45%;
+  background-color: rgba(41,162,41,.4);
+}
+
+.set2 {
+  width: 45%;
+  background-color: rgba(101,62,91,.4);
+}
+
+.set3 {
+  width: 30%;
+  background-color: rgba(211,202,21,.4);
+}
+
+.set4 {
+  width: 45%;
+  background-color: rgba(61,62,41,.4);
+}
+.set5 {
+  width: 30%;
+  background-color: rgba(161,2,41,.4);
+}
+.set6 {
+  width: 46%;
+  background-color: rgba(221,102,41,.4);
+}
+
+.lilTitle {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.lilTitle h5 {
+  margin: 1%;
+  margin-bottom:2%;
+  padding: 5px;
+  font-size: 1em;
+  font-family: 'Roboto Slab', serif;
+}
+
+.lilTitle p {
+  margin: auto;
+  width: 100%;
+}
+
+.titleChange {
+  width: 80%;
+  text-align: center;
+}
+
+mark {
+  color: black;
+  background-color: rgba(240,240,240,.7);
+  padding:4px;
+  border-radius: 5px;
+}
+
+.theContent {
+  width: 100%;
+  /*height: 100%;*/
+  /*padding:7px;*/
+  border-radius: 5px;
+  color: white;
+  font-size: 1.4em;
+  text-shadow: -1px 0 black, 0 2px black, 1px 0 black;
+  font-family: Droid Sans, sans-serif;
+  margin: auto;
+}
+
+.theContent h5 {
+  overflow-y: scroll;
+  max-height: 15vh;
+}
+
+.theContent textarea {
+  width: 90%;
+  overflow-y: scroll;
+  text-align: center;
+}
+
+.date {
+  font-size: .8em;
+}
+
+.buttonsDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.buttonsDiv a {
+  margin: 1%;
+  padding:8px;
+  border-radius:10px;
+  border: 2px solid black;
+  font-family: Droid Sans, sans-serif;
+  text-decoration: none;
+  color: black;
+}
+
+
+.details {
+  background-color: rgba(173,255,47,.9);
+}
+
+.details:hover {
+  background-color: rgba(173,255,47,.3);
+
+}
+
+.home {
+  background-color: rgba(255,255,255,.9);
+}
+
+.home:hover {
+  background-color: rgba(255,255,255,.3);
+}
+
+.delete {
+  background-color: rgba(235,0,0,.9);
+}
+
+.delete:hover {
+  background-color: rgba(235,0,0,.3);
+  cursor: crosshair;
+}
+
+
+
+
+
+
+
+/*////////////////////////////////////////////////////////////////////////*/
+                    /*editw.hbs*/
+#myModal {
+  margin: auto;
+  width: 100%;
+}
+.addIdea {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+}
+
+.wrapperTime {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 75%;
+}
+
+label {
+  font-size: .5em;
+  margin: 1%;
+}
+
+.initialD {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.formModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+}
+
+
+@media (max-width: 1040px) {
+
+  .ish {
+    border-radius: 10px;
+    width: 80%;
+  }
+
+  .lilTitle {
+    font-size: .9em;
+  }
+
+  .ideasHeader {
+    font-size: 1.2em;
+  }
+
+  .adding {
+    margin: 5%;
+  }
+
+  .ideaTitle {
+    font-size: 1.5em;
+  }
+  .set {
+    width: 100%;
+    min-height: 8vh;
+    max-height: 18vh;
+    margin: .6%;
+  }
+
+  .theContent{
+    max-height: 15vh;
+    overflow-y: scroll;
+  }
+
+  .theContent h5 {
+    height: 12vh;
+    margin-top: auto;
+    font-size: .6em;
+  }
+
+  .adding {
+    width: 25%;
+    /*margin: 10%*/
+    margin-top: 3%;
+    margin: 3%;
+  }
+
+  .formSet {
+    width: 100%;
+  }
+
+  .ratings {
+    width: 50%;
+  }
+
+  .ideaTitle {
+    font-size: 2em;
+  }
+
+  .btnDiv button {
+    width: 100%;
+  }
+
+  .formSetTitle {
+    font-size: .7em;
+  }
+
+  .notFormSet {
+    font-size: .5em;
+  }
 }

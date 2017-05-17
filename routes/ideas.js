@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
     .then(ideass => {
       res.render('ideas', { ideass });
     })
-});
+})
 
 router.post('/new', (req,res) => {
   linkQuery.newIdea(req.body)
@@ -27,7 +27,7 @@ router.post('/', function(req, res, next) {
       // console.log(ideass);
       res.render('ideas', { ideass });
     })
-});
+})
 
 
 router.get('/:id/:title', function(req, res, next){
@@ -37,7 +37,9 @@ router.get('/:id/:title', function(req, res, next){
       // console.log(data);
       res.render('singleview', data[0])
     })
-});
+})
+
+
 
 router.get('/:id/:title/edit', (req, res) => {
   const id = req.params.id;
@@ -49,7 +51,6 @@ router.get('/:id/:title/edit', (req, res) => {
 })
 
 router.post('/:id/:title/update', (req,res) => {
-  console.log('fuck you devin');
   var id = req.params.id
   var title = req.params.title
   linkQuery.updateIdea(req.body, id)

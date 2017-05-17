@@ -1,112 +1,284 @@
-<form class="addIdea" action="/ideas/{{id}}/{{title}}/update" method="post">
-  <label for="title">Idea Title</label>
-  <input type="text" name="title" value="{{title}}" placeholder="Enter your idea title">
-  <label for="description"></label>
-  <input type="text" name="description" value="{{description}}" placeholder="enter idea details">
-  <div class="">
-    <label for="excitement ">Idea Excitement</label>
-    <select class="excitement" name="excitement">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
-    <label for="difficulty ">Idea Difficulty</label>
-    <select class="difficulty" name="difficulty">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
-  </div>
-  <div class="">
-    <label for="notes">Add Some Notes:</label>
-    <input type="text" name="notes" value="{{notes}}" placeholder="enter idea notes">
-  </div>
-  <div class="">
-    <label for="defFeatures">Definite Features:</label>
-    <input type="text" name="defFeatures" value="{{defFeatures}}" placeholder="enter idea features...">
-  </div>
-  <div class="">
-    <label for="posFeatures">Possible Features:</label>
-    <input type="text" name="posFeatures" value="{{posFeatures}}" placeholder="enter possible features...">
-  </div>
-  <div class="">
-    <label for="market">What Is Your Market Or Audience:</label>
-    <input type="text" name="market" value="{{market}}" placeholder="market opportunities...">
-  </div>
-  <div class="">
-    <label for="valueAdd">What Is Your Value Add:</label>
-    <input type="text" name="valueAdd" value="{{valueAdd}}" placeholder="value add...">
-  </div>
-  <div class="">
-    <label for="competition">What Or Who Is Your Competition:</label>
-    <input type="text" name="competition" value="{{competition}}" placeholder="enter competition...">
-  </div>
-  <div class="">
-    <label for="compImprove">How to Improve on the competition</label>
-    <input type="text" name="compImprove" value="{{compImprove}}" placeholder="We are 10X faster at half the cost">
-  </div>
-  <div class="">
-    <label for="techUsed">What Technology Are You Using?</label>
-    <input type="text" name="techUsed" value="{{techUsed}}" placeholder="enter details">
-  </div>
-  <div class="">
-    <label for="challenges">What Challneges Will You Face?</label>
-    <input type="text" name="challenges" value="{{challenges}}" placeholder="enter details">
-  </div>
-  <div class="">
-    <label for="resources">List Your Resources</label>
-    <input type="text" name="resources" value="{{resources}}" placeholder="enter details">
-  </div>
-  <div class="">
-    <label for="purpose">What Is Your Inspiration For This Idea</label>
-    <input type="text" name="purpose" value="{{purpose}}" placeholder="enter details">
+<style media="screen">
+  body {
+    width:100%;
+    background-color: rgba(79, 192, 255, .9);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+</style>
+
+<form class="singleViewdiv" action="/ideas/{{id}}/{{title}}/update" method="post">
+
+
+  <div class="titleDiv">
+    <div class="setTitle">
+      <div class="lilTitle">
+        <p class="h1">{{title}}<input required class="titleChange" name="title" value="{{title}}" placeHolder="Change Project Title"></p>
+      </div>
+    </div>
   </div>
 
-  <div class="">
-    <label for="research">Follow up Research</label>
-    <input type="text" name="research" value="{{research}}" placeholder="enter details">
-  </div>
-  <div class="">
-    <label for="links">Valid Links</label>
-    <input type="text" name="links" value="{{links}}" placeholder="enter details">
-  </div>
-  <div class="">
-    <label for="stage">What stage are you in the hatch?</label>
-    <input type="text" placeholder="Ideation Phase" name="stage" value="{{stage}}">
+  <div class="contentDiv">
+    <div class="set set1">
+      <div class="lilTitle">
+        <h5><mark>Project Description:</mark></h5>
+      </div>
+      <div class="theContent">
+        <textarea name="description" placeHolder="Edit Project Description">{{description}}</textarea>
+      </div>
+    </div>
+      <div class="set set1">
+        <div class="lilTitle">
+          <h5><mark>Your Notes Here:</mark></h5>
+        </div>
+        <div class="theContent">
+          <textarea name="notes" placeholder="Enter Idea Notes">{{notes}}</textarea>
+        </div>
+    </div>
   </div>
 
-  <div>
-    {{date}}
+  <div class="contentDiv">
+    <div class="set setMain">
+      <div class="lilTitle">
+        <h5><mark>Excitement Level:</mark></h5>
+      </div>
+      <div class="theContent">
+        <select class="excitement" name="excitement" selected="{{excitement}}">
+          <option value="Somewhat Excited">Somewhat Excited</option>
+          <option value="Kind Of Excited">Kind Of Excited</option>
+          <option value="Excited" selected>Excited</option>
+          <option value="Very Excited">Very Excited</option>
+          <option value="Extremely Excited">Extremely Excited</option>
+        </select>
+      </div>
+    </div>
+    <div class="set setMain">
+      <div class="lilTitle">
+        <h5><mark>Difficulty Level:</mark></h5>
+      </div>
+      <div class="theContent">
+        <select class="difficulty" name="difficulty" selected="{{difficulty}}">
+          <option value="Very Easy">Very Easy</option>
+          <option value="Easy">Easy</option>
+          <option value="Intermediate" selected>Intermediate</option>
+          <option value="Difficult">Difficult</option>
+          <option value="Very Difficult">Very Difficult</option>
+        </select>
+      </div>
+    </div>
+    <div class="set setMain">
+      <div class="lilTitle">
+        <h5><mark>Definite Features:</mark></h5>
+      </div>
+      <div class="theContent">
+        <textarea type="text" name="defFeatures" placeholder="enter Definite Features Here">{{defFeatures}}</textarea>
+      </div>
+    </div>
+    <div class="set setMain">
+      <div class="lilTitle">
+        <h5><mark>Possible Features:</mark></h5>
+      </div>
+      <div class="theContent">
+        <textarea type="text" name="posFeatures" placeholder="Enter Potential Features Here">{{posFeatures}}</textarea>
+      </div>
+    </div>
   </div>
-  <button id="modalSubmit" class="modalBtn">Submit</button>
+
+  <div class="continue">
+    <h3 class="continue">Continue</h3>
+  </div>
+
+  <div class="contentDiv fadeIn1">
+    <div class="set set2">
+      <div class="lilTitle">
+        <h5><mark>Who is Your Target Audience?</mark></h5>
+      </div>
+      <div class="theContent">
+        <textarea type="text" name="market" placeholder="List {{title}}'s Market Opportunities">{{market}}</textarea>
+      </div>
+    </div>
+  <div class="set set2">
+      <div class="lilTitle">
+        <h5><mark>What is Your Product's Value Add?</mark></h5>
+      </div>
+      <div class="theContent">
+        <textarea type="text" name="valueAdd" placeholder="List how {{title}} adds value to everyday life">{{valueAdd}}</textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="contentDiv hidden fadeIn1">
+    <div class="set set3">
+      <div class="lilTitle">
+        <h5><mark>What is Your Current Compeition?</mark></h5>
+      </div>
+      <div class="theContent">
+        <textarea name="competition" placeholder="List the Current Competition {{title}} Faces">{{competition}}</textarea>
+      </div>
+    </div>
+    <div class="set set3">
+      <div class="lilTitle">
+        <h5><mark>How Will You Improve on the Competition?</mark></h5>
+      </div>
+      <div class="theContent">
+        <textarea name="compImprove" placeholder="List How Your Product Will Improve on The Compeition">{{compImprove}}</textarea>
+      </div>
+    </div>
+    <div class="set set3">
+      <div class="lilTitle">
+        <h5><mark>Which Technologies &amp; Processes Will You be Using?</mark></h5>
+      </div>
+      <div class="theContent">
+        <textarea name="techUsed" placeholder="List Which Technologies &amp; Processes That Will be Used to Create {{title}}">{{techUsed}}</textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="continue1 hidden">
+    <h3>Continue</h3>
+  </div>
+
+  <div class="contentDiv hidden fadeIn2">
+    <div class="set set4">
+      <div class="lilTitle">
+        <h5><mark>What Challenges Might You Face?</mark></h5>
+      </div>
+      <div class="theContent">
+        <textarea name="challenges" placeholder="List Any Challenges You May Face While Hatching {{title}}">{{challenges}}</textarea>
+      </div>
+    </div>
+    <div class="set set4">
+      <div class="lilTitle">
+        <h5><mark>List Any Helpful Resources Here:</mark></h5>
+      </div>
+      <div class="theContent">
+        <textarea name="resources" placeholder="List Any Helpful Resources You Find or Use   Here:">{{resources}}</textarea>
+        <h3>{{resources}}</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="contentDiv hidden fadeIn2">
+    <div class="set set5">
+      <div class="lilTitle">
+          <h5><mark>What is Your Purpose for Creating <em>{{title}}</em>?</mark></h5>
+        </div>
+      <div class="theContent">
+        <textarea name="purpose" placeholder="List the Reasons &amp; Inspirations You have for Creating {{title}}: ">{{purpose}}</textarea>
+        <h3>{{purpose}}</h3>
+      </div>
+    </div>
+    <div class="set set5">
+      <div class="lilTitle">
+        <h5><mark>How do You Plan to Research for <em>{{title}}</em>?</mark></h5>
+      </div>
+      <div class="theContent">
+        <textarea name="research" placeholder="List Your Strategy for Gathering Information About {{Title}}">{{research}}</textarea>
+      </div>
+    </div>
+    <div class="set set5">
+      <div class="lilTitle">
+        <h5><mark>List Any Helpful Links Here:</mark></h5>
+      </div>
+      <div class="theContent">
+        <textarea name="links" placeholder="List Any Links You Find Helpful Here">{{links}}</textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="continue2 hidden">
+    <h3>Continue</h3>
+  </div>
+
+  <div class="contentDiv hidden fadein3">
+    <div class="set set6">
+      <div class="lilTitle Bishes">
+        <h5><mark>What Stage is <em>{{title}}</em> currently in?</mark></h5>
+      </div>
+      <div class="theContent">
+        <h3>{{stage}}</h3>
+        <select class="stage" name="stage" selected="{{stage}}">
+          <option value="Conceive" selected>Conceive</option>
+          <option value="Incubate">Incubate</option>
+          <option value="Hatch">Hatch</option>
+        </select>
+      </div>
+    </div>
+    <div class="set set6">
+      <div class="lilTitle">
+        <h5><mark>Created On:</mark></h5>
+      </div>
+    <div class="theContent date">
+      <h3>{{date}}</h3>
+    </div>
+  </div>
+</div>
+
+<div class="update
+btn">
+  <button class="bouton update" type="submit">Update</button>
+</div>
+
 </form>
 
 
+<!-- <div class="wrapper">
 
 
-<!-- <h1>{{title}}</h1>
-<h3>{{description}}</h3>
-<h3>{{difficulty}}</h3>
-<h3>{{excitement}}</h3>
-<h3>{{notes}}</h3>
-<h3>{{defFeatures}}</h3>
-<h3>{{posFeatures}}</h3>
-<h3>{{market}}</h3>
-<h3>{{valueAdd}}</h3>
-<h3>{{competition}}</h3>
-<h3>{{compImprove}}</h3>
-<h3>{{techUsed}}</h3>
-<h3>{{challenges}}</h3>
-<h3>{{resources}}</h3>
-<h3>{{purpose}}</h3>
-<h3>{{research}}</h3>
-<h3>{{links}}</h3>
-<h3>{{stage}}</h3>
-<h3>{{date}}</h3> -->
+<form class="addIdea" action="/ideas/{{id}}/{{title}}/update" method="post">
+  <div class="singleViewdiv">
 
 
-<a href="/ideas"><button>Home</button></a>
+
+
+
+
+  <div class="audience">
+    <div class="audience1">
+      <label for="market">What Is Your Market Or Audience:</label>
+      <input type="text" name="market" value="{{market}}" placeholder="market opportunities...">
+    </div>
+    <div class="audience1">
+      <label for="valueAdd">What Is Your Value Add:</label>
+      <input type="text" name="valueAdd" value="{{valueAdd}}" placeholder="value add...">
+    </div>
+  </div>
+
+  <div class="competition">
+    <div class="competition1">
+      <label for="competition">What Or Who Is Your Competition:</label>
+      <input type="text" name="competition" value="{{competition}}" placeholder="enter competition...">
+  </div>
+  <div class="competition1">
+    <label for="compImprove">How to Improve on the competition</label>
+    <input type="text" name="compImprove" value="{{compImprove}}" placeholder="We are 10X faster at half the cost">
+  </div>
+  <div class="competition1">
+    <label for="techUsed">What Technology Are You Using?</label>
+    <input type="text" name="techUsed" value="{{techUsed}}" placeholder="enter details">
+  </div>
+</div>
+
+
+  <div class="challenges_resources">
+    <div class="cr">
+      <label for="challenges">What Challneges Will You Face?</label>
+      <input type="text" name="challenges" value="{{challenges}}" placeholder="enter details">
+    </div>
+    <div class="cr">
+      <label for="resources">List Any Helpful Resources Here:</label>
+      <input type="text" name="resources" value="{{resources}}" placeholder="enter details">
+    </div>
+  </div>
+
+<div class="purpose">
+  <div class="purpose1">
+    <label for="purpose">What Is Your Inspiration For This Idea</label>
+    <input type="text" name="purpose" value="{{purpose}}" placeholder="enter details">
+  </div>
+  <div class="purpose1">
+    <label for="research">Follow up Research</label>
+    <input type="text" name="research" value="{{research}}" placeholder="enter details">
+  </div>
+  <div class="purpose1">
+    <label for="links">Valid Links</label>

@@ -1,60 +1,93 @@
-<div class="">
+<style media="screen">
+  body {
+    /*background-color: lightgrey;*/
+    width:100%;
+    height: 100vh;
+    background-image: url('../images/bulletin.jpg');
+    background-size: contain;
+    background-repeat: repeat;
+  }
+
+  label {
+    font-size: 1.5em;
+  }
+</style>
+
+<div class="wrapper">
+
+<div class="ideasHeader">
+  <h1>Current Ideas</h1>
+</div>
+
+<div class="ideaDiv">
   {{#each ideass}}
-          <h2>
-            {{title}}
-          </h2>
-          <a href="ideas/{{id}}/{{title}}" class ="titles"><button>Hatch Idea
-            </button></a>
+        <div class="ish">
+          <div class="ratings">
+            <p>{{excitement}}</p>
+            <h6 class="ideaTitle titles">{{title}}</h6>
+            <p>{{difficulty}}</p>
+          </div>
+          <h4 class="description initialD">
+            {{description}}
+          </h4>
+          <a href="ideas/{{id}}/{{title}}" class="hatchButton">Hatch Idea</a>
+        </div>
   {{/each}}
 </div>
 
-
-<div id="modalFrame">Add Idea</div>
-
-<div id="myModal" hidden>
-        <div class="modalMain">
-            <!-- <p>Add Idea</p> -->
-            <form class="addIdea" action="/ideas/new" method="post">
-              <label for="title">Idea Title</label>
-              <input type="text" name="title" value="" placeholder="Enter your idea title">
-              <label for="description"></label>
-              <input type="text" name="description" value="" placeholder="enter idea details">
-              <div class="">
-                <label for="excitement ">Idea Excitement</label>
-                <select class="excitement" name="excitement">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
-                <label for="difficulty ">Idea Difficulty</label>
-                <select class="difficulty" name="difficulty">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
-              </div>
-              <div>
-                {{date}}
-              </div>
-              <button id="modalSubmit" class="modalBtn">Submit</button>
-            </form>
-        </div>
-        <div class="modalFooter">
-          <button id="modalCancel" class="modalBtn">Cancel</button>
-        </div>
+<div class="addIdea">
+  <div class="adding">Add Idea</div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript">
-$('#modalFrame').click(function() {
-  $('#modalFrame').hide();
-  $('#myModal').toggleClass('active');
-})
-$('#modalCancel').click(function() {
-  $('#myModal').toggleClass('active')
-})
-</script>
+
+  <form class="initialForm hidden" action="/ideas/new" method="post">
+    <div class="formWrapper">
+      <div class="blockSet">
+        <div class="formSet">
+          <div class="formSetTitle">
+            <label class="labeled" for="">Idea Title</label>
+          </div>
+          <textarea required class="inputted" name="title" rows="2" cols="40" placeholder="Insert a Title Here:"></textarea>
+        </div>
+        <div class="formSet">
+          <div class="formSetTitle">
+            <label class="labeled" for="">Idea Description</label>
+          </div>
+          <textarea class="inputted" name="description" rows="5" cols="30" placeholder="Insert a Description Here"></textarea>
+        </div>
+      </div>
+      <div class="blockSet">
+        <div class="formSet">
+          <div class="formSetTitle">
+            <label class="labeled" for="">Idea Excitement</label>
+          </div>
+          <select class="excitement" name="excitement">
+            <option value="Somewhat Excited">Somewhat Excited</option>
+            <option value="Kind Of Excited">Kind Of Excited</option>
+            <option value="Excited" selected>Excited</option>
+            <option value="Very Excited">Very Excited</option>
+            <option value="Extremely Excited">Extremely Excited</option>
+          </select>
+        </div>
+        <div class="formSet">
+          <div class="formSetTitle">
+            <label class="labeled" for="">Idea Difficulty</label>
+          </div>
+          <select class="difficulty" name="difficulty">
+            <option value="Very Easy">Very Easy</option>
+            <option value="Easy">Easy</option>
+            <option value="Intermediate" selected>Intermediate</option>
+            <option value="Difficult">Difficult</option>
+            <option value="Very Difficult">Very Difficult</option>
+          </select>
+        </div>
+        <div class="notFormSet">
+          <div class="btnDiv">
+            <button type="submit" class="bouton" name="button">Submit</button>
+            <button type="button" class="bouton cancel" name="button">Cancel</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </form>
+</div>
